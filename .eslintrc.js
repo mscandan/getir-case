@@ -82,6 +82,7 @@ module.exports = {
     ],
     'react/no-unused-prop-types': 0,
     'react/require-default-props': 0,
+    'react/function-component-definition': 0,
   },
   settings: {
     'import/resolver': {
