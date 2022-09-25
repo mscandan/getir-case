@@ -1,5 +1,4 @@
 const additionalHooks = ['useKeyboard'];
-
 module.exports = {
   env: {
     browser: true,
@@ -16,6 +15,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     'airbnb',
+    'plugin:storybook/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -33,7 +33,12 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'jsx-a11y'],
   ignorePatterns: ['src/assets/**/*', 'src/components/Icon/icons/**/*'],
   rules: {
-    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
@@ -50,10 +55,20 @@ module.exports = {
     'arrow-parens': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
+    ],
     'no-use-before-define': 'off',
     'no-underscore-dangle': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.tsx'],
+      },
+    ],
     'react/jsx-wrap-multilines': 'off',
     'operator-linebreak': 'off',
     'implicit-arrow-linebreak': 'off',
@@ -61,7 +76,12 @@ module.exports = {
     'no-plusplus': 'off',
     'no-continue': 'off',
     'react/jsx-curly-newline': 'off',
-    'max-len': ['error', { code: 120 }],
+    'max-len': [
+      'error',
+      {
+        code: 120,
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'no-unused-vars': 'off',
     'no-shadow': 'off',

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Tests Flat Button Tests should match snapshot 1`] = `
+<button
+  className="sc-bczRLJ kZUXuj"
+  data-testid="button"
+  size="sm"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Outline Button Tests should match snapshot 1`] = `
+<button
+  className="sc-bczRLJ isrCLg"
+  data-testid="button"
+  size="sm"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Solid Button Tests should match snapshot 1`] = `
+<button
+  className="sc-bczRLJ gQXtHi"
+  data-testid="button"
+  size="sm"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;

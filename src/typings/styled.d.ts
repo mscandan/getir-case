@@ -16,5 +16,6 @@ export enum ColorEnums {
 type ThemeType = { readonly [T in ColorEnums]: Tones };
 
 declare module 'styled-components' {
-  export type DefaultTheme = ThemeType;
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends ThemeType {}
 }

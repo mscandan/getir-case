@@ -19,6 +19,6 @@
     "types": ["jest", "node"],
     "baseUrl": "src"
   },
-  "include": ["src", "typings"],
+  "include": ["src", "typings", "__tests__/Button.test.tsx"],
   "exclude": ["node_modules", "./src/assets", "__tests__"]
 }
