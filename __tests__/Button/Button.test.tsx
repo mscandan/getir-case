@@ -8,12 +8,22 @@ import { appTheme } from '../../src/constants/theme';
 
 describe('Button Tests', () => {
   describe('Solid Button Tests', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot with small solid button', () => {
       const comp = renderer.create(componentRenderer(<SolidButton size="sm">hello</SolidButton>));
       expect(comp).toMatchSnapshot();
     });
 
-    it('should render the given child component', () => {
+    it('should match snapshot with medium solid button', () => {
+      const comp = renderer.create(componentRenderer(<SolidButton size="md">hello</SolidButton>));
+      expect(comp).toMatchSnapshot();
+    });
+
+    it('should match snapshot with large solid button', () => {
+      const comp = renderer.create(componentRenderer(<SolidButton size="lg">hello</SolidButton>));
+      expect(comp).toMatchSnapshot();
+    });
+
+    it('should render the given child component in solid button', () => {
       const { getByText } = render(
         componentRenderer(
           <SolidButton size="sm">
@@ -24,7 +34,7 @@ describe('Button Tests', () => {
       expect(getByText('hello')).toBeInTheDocument();
     });
 
-    it('should invoke the given function on click', () => {
+    it('should invoke the given function on click in solid button', () => {
       const onClick = jest.fn();
 
       const { getByTestId } = render(
@@ -40,16 +50,86 @@ describe('Button Tests', () => {
   });
 
   describe('Flat Button Tests', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot with flat button', () => {
       const comp = renderer.create(componentRenderer(<FlatButton size="sm">hello</FlatButton>));
       expect(comp).toMatchSnapshot();
+    });
+
+    it('should match snapshot with medium flat button', () => {
+      const comp = renderer.create(componentRenderer(<FlatButton size="md">hello</FlatButton>));
+      expect(comp).toMatchSnapshot();
+    });
+
+    it('should match snapshot with large flat button', () => {
+      const comp = renderer.create(componentRenderer(<FlatButton size="lg">hello</FlatButton>));
+      expect(comp).toMatchSnapshot();
+    });
+
+    it('should render the given child component in flat button', () => {
+      const { getByText } = render(
+        componentRenderer(
+          <FlatButton size="sm">
+            <div>hello</div>
+          </FlatButton>,
+        ),
+      );
+      expect(getByText('hello')).toBeInTheDocument();
+    });
+
+    it('should invoke the given function on click in flat button', () => {
+      const onClick = jest.fn();
+
+      const { getByTestId } = render(
+        componentRenderer(
+          <FlatButton size="sm" onClick={onClick}>
+            <div>hello</div>
+          </FlatButton>,
+        ),
+      );
+      fireEvent.click(getByTestId('button'));
+      expect(onClick).toBeCalledTimes(1);
     });
   });
 
   describe('Outline Button Tests', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot with outline button', () => {
       const comp = renderer.create(componentRenderer(<OutlineButton size="sm">hello</OutlineButton>));
       expect(comp).toMatchSnapshot();
+    });
+
+    it('should match snapshot with medium outline button', () => {
+      const comp = renderer.create(componentRenderer(<FlatButton size="md">hello</FlatButton>));
+      expect(comp).toMatchSnapshot();
+    });
+
+    it('should match snapshot with large outline button', () => {
+      const comp = renderer.create(componentRenderer(<FlatButton size="lg">hello</FlatButton>));
+      expect(comp).toMatchSnapshot();
+    });
+
+    it('should render the given child component in outline button', () => {
+      const { getByText } = render(
+        componentRenderer(
+          <OutlineButton size="sm">
+            <div>hello</div>
+          </OutlineButton>,
+        ),
+      );
+      expect(getByText('hello')).toBeInTheDocument();
+    });
+
+    it('should invoke the given function on click in outline button', () => {
+      const onClick = jest.fn();
+
+      const { getByTestId } = render(
+        componentRenderer(
+          <OutlineButton size="sm" onClick={onClick}>
+            <div>hello</div>
+          </OutlineButton>,
+        ),
+      );
+      fireEvent.click(getByTestId('button'));
+      expect(onClick).toBeCalledTimes(1);
     });
   });
 

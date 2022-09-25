@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Tests Flat Button Tests should match snapshot 1`] = `
+exports[`Button Tests Flat Button Tests should match snapshot with flat button 1`] = `
 <button
   className="sc-bczRLJ kZUXuj"
   data-testid="button"
@@ -15,7 +15,67 @@ exports[`Button Tests Flat Button Tests should match snapshot 1`] = `
 </button>
 `;
 
-exports[`Button Tests Outline Button Tests should match snapshot 1`] = `
+exports[`Button Tests Flat Button Tests should match snapshot with large flat button 1`] = `
+<button
+  className="sc-bczRLJ cONbwI"
+  data-testid="button"
+  size="lg"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Flat Button Tests should match snapshot with medium flat button 1`] = `
+<button
+  className="sc-bczRLJ hExauT"
+  data-testid="button"
+  size="md"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Outline Button Tests should match snapshot with large outline button 1`] = `
+<button
+  className="sc-bczRLJ cONbwI"
+  data-testid="button"
+  size="lg"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Outline Button Tests should match snapshot with medium outline button 1`] = `
+<button
+  className="sc-bczRLJ hExauT"
+  data-testid="button"
+  size="md"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Outline Button Tests should match snapshot with outline button 1`] = `
 <button
   className="sc-bczRLJ isrCLg"
   data-testid="button"
@@ -30,7 +90,37 @@ exports[`Button Tests Outline Button Tests should match snapshot 1`] = `
 </button>
 `;
 
-exports[`Button Tests Solid Button Tests should match snapshot 1`] = `
+exports[`Button Tests Solid Button Tests should match snapshot with large solid button 1`] = `
+<button
+  className="sc-bczRLJ lowIdZ"
+  data-testid="button"
+  size="lg"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Solid Button Tests should match snapshot with medium solid button 1`] = `
+<button
+  className="sc-bczRLJ jrxbtm"
+  data-testid="button"
+  size="md"
+  type="button"
+>
+  <div
+    className="sc-gsnTZi kqAOIE"
+  >
+    hello
+  </div>
+</button>
+`;
+
+exports[`Button Tests Solid Button Tests should match snapshot with small solid button 1`] = `
 <button
   className="sc-bczRLJ gQXtHi"
   data-testid="button"
