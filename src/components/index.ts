@@ -1,4 +1,5 @@
 import { FlatButton, OutlineButton, SolidButton } from './Button';
 import { Checkbox } from './Checkbox';
+import { Radio } from './Radio';
 
-export { FlatButton, OutlineButton, SolidButton, Checkbox };
+export { FlatButton, OutlineButton, SolidButton, Checkbox, Radio };

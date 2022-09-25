@@ -11,6 +11,7 @@ export enum ColorEnums {
   COMPONENT_BG = 'COMPONENT_BG',
   TEXT_LIGHT = 'TEXT_LIGHT',
   TEXT_DARK = 'TEXT_DARK',
+  BORDER = 'BORDER',
 }
 
 type ThemeType = { readonly [T in ColorEnums]: Tones };
