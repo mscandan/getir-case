@@ -27,17 +27,12 @@ const StyledButtonContentContainer = styled.div`
   justify-content: center;
 `;
 
-export const Button: React.FC<ButtonProps & React.PropsWithChildren> = ({
-  children,
-  onClick,
-  type = 'button',
-  size,
-  buttonType = 'solid',
-  ...rest
-}) => {
-  return (
-    <StyledButton type={type} onClick={onClick} size={size} buttonType={buttonType} {...rest} data-testid="button">
-      <StyledButtonContentContainer>{children}</StyledButtonContentContainer>
-    </StyledButton>
-  );
-};
+export const Button: React.FC<ButtonProps & React.PropsWithChildren> = React.memo(
+  ({ children, onClick, type = 'button', size, buttonType = 'solid', ...rest }) => {
+    return (
+      <StyledButton type={type} onClick={onClick} size={size} buttonType={buttonType} {...rest} data-testid="button">
+        <StyledButtonContentContainer>{children}</StyledButtonContentContainer>
+      </StyledButton>
+    );
+  },
+);

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Tests should match snapshot with checked status false 1`] = `
+<input
+  checked={false}
+  className="sc-dkzDqf eUQuED"
+  data-testid="checkbox"
+  onChange={[MockFunction]}
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Tests should match snapshot with checked status true 1`] = `
+<input
+  checked={true}
+  className="sc-dkzDqf eUQuED"
+  data-testid="checkbox"
+  onChange={[MockFunction]}
+  type="checkbox"
+/>
+`;
