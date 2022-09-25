@@ -74,6 +74,7 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'jsx-a11y/anchor-is-valid': 0,
+    'react/button-has-type': 0,
     'react-hooks/exhaustive-deps': [
       'error',
       {
