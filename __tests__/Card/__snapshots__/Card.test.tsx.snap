@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Tests should match snapshot with large card 1`] = `
+<div
+  className="sc-iqcoie"
+  data-testid="card"
+>
+  <div
+    className="sc-evZas fXQDtx"
+  >
+    card title
+  </div>
+  <div
+    className="sc-crXcEl bfiyet"
+    size="large"
+  >
+    child
+  </div>
+</div>
+`;
+
+exports[`Card Tests should match snapshot with small card 1`] = `
+<div
+  className="sc-iqcoie"
+  data-testid="card"
+>
+  <div
+    className="sc-evZas fXQDtx"
+  >
+    card title
+  </div>
+  <div
+    className="sc-crXcEl iAJIBg"
+    size="sm"
+  >
+    child
+  </div>
+</div>
+`;
