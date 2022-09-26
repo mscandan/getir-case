@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Group Tests should match snapshot 1`] = `
+<div
+  className="sc-breuTD iiijzD"
+>
+  <button
+    className="sc-bczRLJ eokieJ sc-ksZaOG hbHLQS"
+    data-testid="button"
+    onClick={[Function]}
+    type="button"
+  >
+    button 0
+  </button>
+  <button
+    className="sc-bczRLJ eokieJ sc-ksZaOG idNAKu"
+    data-testid="button"
+    onClick={[Function]}
+    type="button"
+  >
+    button 1
+  </button>
+  <button
+    className="sc-bczRLJ eokieJ sc-ksZaOG idNAKu"
+    data-testid="button"
+    onClick={[Function]}
+    type="button"
+  >
+    button 2
+  </button>
+</div>
+`;
