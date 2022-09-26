@@ -37,22 +37,24 @@ const iconList: { [key: string]: React.FunctionComponent<React.SVGProps<SVGSVGEl
   vector: Icons.Vector,
 };
 
-export const Icon: React.FC<IconProps> = React.memo(({ size, name, className, color, stroke, onClick, ...rest }) => {
-  const SvgIcon = iconList[name];
+export const Icon: React.FC<IconProps> = React.memo(
+  ({ size = 20, name, className, color, stroke, onClick, ...rest }) => {
+    const SvgIcon = iconList[name];
 
-  if (!SvgIcon) {
-    return null;
-  }
+    if (!SvgIcon) {
+      return null;
+    }
 
-  return (
-    <SvgIcon
-      className={className}
-      width={size}
-      height={size}
-      color={color}
-      stroke={stroke}
-      onClick={onClick}
-      {...rest}
-    />
-  );
-});
+    return (
+      <SvgIcon
+        className={className}
+        width={size}
+        height={size}
+        color={color}
+        stroke={stroke}
+        onClick={onClick}
+        {...rest}
+      />
+    );
+  },
+);
