@@ -19,17 +19,11 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledButtonContentContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren> = React.memo(
   ({ children, onClick, type = 'button', ...rest }) => {
     return (
       <StyledButton type={type} onClick={onClick} {...rest} data-testid="button">
-        <StyledButtonContentContainer>{children}</StyledButtonContentContainer>
+        {children}
       </StyledButton>
     );
   },
