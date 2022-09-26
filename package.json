@@ -74,7 +74,7 @@
     "lint:css": "stylelint './src/**/*.tsx' --cache --cache-location '.stylelintcache'",
     "lint": "yarn eslint && yarn prettier --list-different && yarn lint:css",
     "lint:fix": "yarn eslint:fix && yarn prettier:fix && yarn lint:css",
-    "check-rule": "yarn type-check && yarn lint",
+    "check-rule": "yarn type-check && yarn lint && yarn test",
     "storybook": "start-storybook -p 6006 public",
     "prepare": "husky install",
     "build-storybook": "build-storybook -s public"
