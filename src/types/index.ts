@@ -9,3 +9,5 @@ export type ButtonGroupDataType = {
   id: string;
   label: string;
 };
+
+export type MediaBreakpointType = 'mobile' | 'tablet' | 'desktop';
