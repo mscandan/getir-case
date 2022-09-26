@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Tests should match snapshot 1`] = `
+<div
+  className="sc-fEOsli cGmTrm"
+>
+  <div
+    className="sc-bjUoiL jVuJAo"
+  >
+    <div
+      className="sc-idiyUo cFzIwY"
+    >
+      name
+    </div>
+    <div
+      className="sc-dIouRR eckoxq"
+    >
+      ₺
+      0
+    </div>
+  </div>
+  <div
+    className="sc-hHLeRK gkGGud"
+  >
+    <button
+      className="sc-bczRLJ eokieJ sc-fLlhyt bnOgBf"
+      data-testid="button"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="sc-dmRaPn bMSLby"
+    >
+      0
+    </div>
+    <button
+      className="sc-bczRLJ eokieJ sc-fLlhyt bnOgBf"
+      data-testid="button"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
