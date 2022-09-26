@@ -1,21 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox Tests should match snapshot with checked status false 1`] = `
-<input
-  checked={false}
-  className="sc-dkzDqf eUQuED"
+<div
+  className="sc-dkzDqf jnTJQd"
   data-testid="checkbox"
-  onChange={[MockFunction]}
-  type="checkbox"
-/>
+  onClick={[Function]}
+>
+  <div
+    className="sc-gsnTZi bVymCr"
+  />
+  <div
+    className="sc-hKMtZM eEWcMg"
+    title="label (3)"
+  >
+    <span
+      className="sc-eCYdqJ gOFRke"
+    >
+      label
+    </span>
+    <span
+      className="sc-jSMfEi eluWri"
+    >
+       (
+      3
+      )
+    </span>
+  </div>
+</div>
 `;
 
 exports[`Checkbox Tests should match snapshot with checked status true 1`] = `
-<input
-  checked={true}
-  className="sc-dkzDqf eUQuED"
+<div
+  className="sc-dkzDqf jnTJQd"
   data-testid="checkbox"
-  onChange={[MockFunction]}
-  type="checkbox"
-/>
+  onClick={[Function]}
+>
+  <div
+    className="sc-gsnTZi bVymCr"
+  />
+  <div
+    className="sc-hKMtZM eEWcMg"
+    title="label (3)"
+  >
+    <span
+      className="sc-eCYdqJ gOFRke"
+    >
+      label
+    </span>
+    <span
+      className="sc-jSMfEi eluWri"
+    >
+       (
+      3
+      )
+    </span>
+  </div>
+</div>
 `;

@@ -20,15 +20,15 @@ const CheckboxContainer = styled.div`
 storiesOf('Checkbox', module).add('Checkbox Comp', () => {
   const [isChecked, setIsChecked] = React.useState(false);
 
-  const handleCheckChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(e.target.checked);
+  const handleCheckChange = () => {
+    setIsChecked(oldValue => !oldValue);
   };
 
   return (
     <Container>
       <GlobalStyles />
       <CheckboxContainer>
-        <Checkbox isChecked={isChecked} onChange={handleCheckChange} />
+        <Checkbox isChecked={isChecked} onChange={handleCheckChange} label="label" count={3} />
       </CheckboxContainer>
     </Container>
   );

@@ -3,7 +3,7 @@
 exports[`Radio Button Tests should match the snapshot with the checked radio button 1`] = `
 <input
   checked={true}
-  className="sc-hKMtZM djMMdJ"
+  className="sc-iBkjds hYrlUh"
   data-testid="radio-radio"
   id="radio"
   onChange={[MockFunction]}
@@ -14,7 +14,7 @@ exports[`Radio Button Tests should match the snapshot with the checked radio but
 exports[`Radio Button Tests should match the snapshot with the unchecked radio button 1`] = `
 <input
   checked={false}
-  className="sc-hKMtZM djMMdJ"
+  className="sc-iBkjds hYrlUh"
   data-testid="radio-radio"
   id="radio"
   onChange={[MockFunction]}

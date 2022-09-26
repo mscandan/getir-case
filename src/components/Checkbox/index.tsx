@@ -1,39 +1,77 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Icon } from '../Icon';
 
 interface CheckboxProps {
   isChecked: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: () => void;
+  label: string;
+  count: number;
 }
 
-const StyledCheckbox = styled.input`
-  appearance: none;
-  width: 22px;
-  height: 22px;
-  border-radius: 2px;
-  margin-right: 12px;
+const StyledCheckbox = styled.div<{ isChecked: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${({ isChecked, theme }) => (isChecked ? theme.COMPONENT_BG.BASE : theme.TEXT_LIGHT.HIGHLIGHT)};
   box-shadow: 0px 1px 7px rgba(93, 56, 192, 0.4);
-  padding: 6px;
-  transition: background-color 0.4s;
+  border-radius: 2px;
+  height: 22px;
+  width: 22px;
+  transition: all 0.2s;
+`;
+
+const StyledCheckboxWrapper = styled.div`
+  display: flex;
+  align-items: center;
 
   &:hover {
     cursor: pointer;
   }
-
-  &:checked {
-    position: relative;
-    background-color: ${({ theme }) => theme.COMPONENT_BG.BASE};
-    &::after {
-      content: '✓';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: ${({ theme }) => theme.TEXT_LIGHT.HIGHLIGHT};
-    }
-  }
 `;
 
-export const Checkbox: React.FC<CheckboxProps> = React.memo(({ isChecked, onChange, ...rest }) => {
-  return <StyledCheckbox type="checkbox" checked={isChecked} onChange={onChange} data-testid="checkbox" {...rest} />;
+const StyledCheckboxLabel = styled.div`
+  margin-left: 8px;
+  display: flex;
+  width: 200px;
+`;
+
+const StyledCheckboxLabelText = styled.span`
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  color: ${({ theme }) => theme.TEXT_DARK.BASE};
+`;
+
+const StyledCheckboxCount = styled.span`
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  color: ${({ theme }) => theme.TEXT_LIGHT.BASE};
+  margin-left: 4px;
+`;
+
+const StyledIcon = styled(Icon)`
+  width: 10.67px;
+  height: 7.33px;
+  stroke: ${({ theme }) => theme.TEXT_LIGHT.HIGHLIGHT};
+`;
+
+export const Checkbox: React.FC<CheckboxProps> = React.memo(({ isChecked, onChange, label, count, ...rest }) => {
+  const handleClick = () => {
+    if (onChange) onChange();
+  };
+
+  return (
+    <StyledCheckboxWrapper onClick={handleClick} {...rest} data-testid="checkbox">
+      <StyledCheckbox isChecked={isChecked}>{isChecked && <StyledIcon name="vector" />}</StyledCheckbox>
+      <StyledCheckboxLabel title={`${label} (${count})`}>
+        <StyledCheckboxLabelText>{label}</StyledCheckboxLabelText>
+        <StyledCheckboxCount> ({count})</StyledCheckboxCount>
+      </StyledCheckboxLabel>
+    </StyledCheckboxWrapper>
+  );
 });
