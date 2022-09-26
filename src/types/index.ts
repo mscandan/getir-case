@@ -1,2 +1,4 @@
-export type ButtonType = 'solid' | 'outline' | 'flat';
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type RadiosDataType = {
+  id: string;
+  label: string;
+};

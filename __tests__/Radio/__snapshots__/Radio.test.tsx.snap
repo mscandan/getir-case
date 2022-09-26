@@ -1,23 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Radio Button Tests should match the snapshot with the checked radio button 1`] = `
-<input
-  checked={true}
-  className="sc-iBkjds hYrlUh"
-  data-testid="radio-radio"
-  id="radio"
-  onChange={[MockFunction]}
-  type="radio"
-/>
-`;
-
 exports[`Radio Button Tests should match the snapshot with the unchecked radio button 1`] = `
-<input
-  checked={false}
-  className="sc-iBkjds hYrlUh"
-  data-testid="radio-radio"
-  id="radio"
-  onChange={[MockFunction]}
-  type="radio"
-/>
+<div
+  className="sc-iBkjds"
+>
+  <div
+    className="sc-ftvSup eyRKs"
+    data-testid="radio-0"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-papXJ hsLVcN"
+    />
+    <div
+      className="sc-jqUVSM jTscOn"
+    >
+      item 1
+    </div>
+  </div>
+  <div
+    className="sc-ftvSup eyRKs"
+    data-testid="radio-1"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-papXJ kJbbum"
+    />
+    <div
+      className="sc-jqUVSM jTscOn"
+    >
+      item 2
+    </div>
+  </div>
+  <div
+    className="sc-ftvSup eyRKs"
+    data-testid="radio-2"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-papXJ kJbbum"
+    />
+    <div
+      className="sc-jqUVSM jTscOn"
+    >
+      item 3
+    </div>
+  </div>
+  <div
+    className="sc-ftvSup eyRKs"
+    data-testid="radio-3"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-papXJ kJbbum"
+    />
+    <div
+      className="sc-jqUVSM jTscOn"
+    >
+      item 4
+    </div>
+  </div>
+</div>
 `;

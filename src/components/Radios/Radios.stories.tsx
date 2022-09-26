@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import GlobalStyles from 'lib/globalStyles';
 import styled from 'styled-components';
-import { Radio } from '.';
+import { Radios } from '.';
 
 const Container = styled.div`
   width: 100vw;
@@ -22,18 +22,14 @@ const RadioItems = [
 storiesOf('Radio', module).add('Radio Component', () => {
   const [selectedRadioId, setSelectedRadioId] = React.useState(RadioItems[0].id);
 
-  const handleRadioSelectionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedRadioId(e.target.id);
+  const handleRadioSelectionChange = (newId: string) => {
+    setSelectedRadioId(newId);
   };
 
   return (
     <Container>
       <GlobalStyles />
-      {RadioItems.map(el => {
-        return (
-          <Radio key={el.id} isSelected={el.id === selectedRadioId} onChange={handleRadioSelectionChange} id={el.id} />
-        );
-      })}
+      <Radios data={RadioItems} onChange={handleRadioSelectionChange} selectedOptionId={selectedRadioId} />
     </Container>
   );
 });

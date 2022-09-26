@@ -1,6 +1,6 @@
 import { Button } from './Button';
 import { Checkbox } from './Checkbox';
-import { Radio } from './Radio';
+import { Radios } from './Radios';
 import { Icon } from './Icon';
 
-export { Button, Checkbox, Radio, Icon };
+export { Button, Checkbox, Radios, Icon };

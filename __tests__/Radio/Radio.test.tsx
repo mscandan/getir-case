@@ -2,17 +2,20 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { fireEvent, render } from '@testing-library/react';
 import { componentRenderer } from '../utils';
-import { Radio } from '../../src/components';
+import { Radios } from '../../src/components';
+
+const RadioItems = [
+  { id: '0', label: 'item 1' },
+  { id: '1', label: 'item 2' },
+  { id: '2', label: 'item 3' },
+  { id: '3', label: 'item 4' },
+];
 
 describe('Radio Button Tests', () => {
   it('should match the snapshot with the unchecked radio button', () => {
-    const comp = renderer.create(componentRenderer(<Radio id="radio" isSelected={false} onChange={jest.fn()} />));
-
-    expect(comp).toMatchSnapshot();
-  });
-
-  it('should match the snapshot with the checked radio button', () => {
-    const comp = renderer.create(componentRenderer(<Radio id="radio" isSelected onChange={jest.fn()} />));
+    const comp = renderer.create(
+      componentRenderer(<Radios data={RadioItems} onChange={jest.fn()} selectedOptionId="0" />),
+    );
 
     expect(comp).toMatchSnapshot();
   });
@@ -20,14 +23,7 @@ describe('Radio Button Tests', () => {
   it('should invoke the given function on click', () => {
     const onChange = jest.fn();
     const { getByTestId } = render(
-      componentRenderer(
-        <div>
-          <Radio id="1" isSelected onChange={onChange} />
-          <Radio id="2" isSelected={false} onChange={onChange} />
-          <Radio id="3" isSelected={false} onChange={onChange} />
-          <Radio id="4" isSelected={false} onChange={onChange} />
-        </div>,
-      ),
+      componentRenderer(<Radios data={RadioItems} onChange={onChange} selectedOptionId="0" />),
     );
 
     const radioEl = getByTestId('radio-2');
