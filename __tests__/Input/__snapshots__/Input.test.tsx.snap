@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Tests should match snapshot with value 1`] = `
+<div
+  className="sc-hAZoDl"
+>
+  <input
+    className="sc-fnykZs ctepQx"
+    data-testid="input"
+    onChange={[MockFunction]}
+    placeholder="placeholder"
+    value="value"
+  />
+</div>
+`;
+
+exports[`Input Tests should match snapshot without value 1`] = `
+<div
+  className="sc-hAZoDl"
+>
+  <input
+    className="sc-fnykZs ctepQx"
+    data-testid="input"
+    onChange={[MockFunction]}
+    placeholder="placeholder"
+    value=""
+  />
+</div>
+`;

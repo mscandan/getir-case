@@ -4,5 +4,6 @@ import { Radios } from './Radios';
 import { Icon } from './Icon';
 import { Card } from './Card';
 import { ButtonGroup } from './ButtonGroup';
+import { Input } from './Input';
 
-export { Button, Checkbox, Radios, Icon, Card, ButtonGroup };
+export { Button, Checkbox, Radios, Icon, Card, ButtonGroup, Input };
