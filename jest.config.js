@@ -7,6 +7,7 @@ module.exports = {
         isolatedModules: true,
       },
     ],
+    '^.+\\.svg$': 'jest-transform-stub',
   },
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   testPathIgnorePatterns: ['node_modules', '/__tests__/utils'],

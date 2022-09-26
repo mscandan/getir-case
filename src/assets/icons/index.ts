@@ -1,0 +1,11 @@
+export { ReactComponent as Logo } from './logo.svg';
+export { ReactComponent as ArrowLeft } from './arrow-left.svg';
+export { ReactComponent as ArrowRight } from './arrow-right.svg';
+export { ReactComponent as Basket } from './basket.svg';
+export { ReactComponent as Close } from './close.svg';
+export { ReactComponent as Loading } from './loading.svg';
+export { ReactComponent as Menu } from './menu.svg';
+export { ReactComponent as Minus } from './minus.svg';
+export { ReactComponent as Plus } from './plus.svg';
+export { ReactComponent as ThreeDots } from './threeDots.svg';
+export { ReactComponent as Vector } from './vector.svg';

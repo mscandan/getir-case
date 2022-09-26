@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component tests should match snapshot with name=arrowLeft 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=arrowRight 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=basket 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=close 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=loading 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=logo 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=menu 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=minus 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=plus 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=threeDots 1`] = `null`;
+
+exports[`Icon component tests should match snapshot with name=vector 1`] = `null`;

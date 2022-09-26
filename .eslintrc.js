@@ -31,7 +31,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'jsx-a11y'],
-  ignorePatterns: ['src/assets/**/*', 'src/components/Icon/icons/**/*'],
+  ignorePatterns: ['src/assets/**/*'],
   rules: {
     'prettier/prettier': [
       'error',
