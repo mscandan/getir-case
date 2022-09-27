@@ -21,6 +21,7 @@ export type CompanyType = {
   zip: string;
   account: number;
   contact: string;
+  count: number;
 };
 
 export type ProductItemType = {

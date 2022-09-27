@@ -8,6 +8,7 @@ interface Tones {
 
 export enum ColorEnums {
   PAGE_BG = 'PAGE_BG',
+  PAGE_TITLE = 'PAGE_TITLE',
   COMPONENT_BG = 'COMPONENT_BG',
   TEXT_LIGHT = 'TEXT_LIGHT',
   TEXT_DARK = 'TEXT_DARK',

@@ -1,4 +1,3 @@
-const API_URL =
-  process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_API_URL : process.env.REACT_APP_PROD_API_URL;
+const API_URL = 'https://getircase-api.herokuapp.com';
 
 export default API_URL;

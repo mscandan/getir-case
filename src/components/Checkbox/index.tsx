@@ -4,7 +4,7 @@ import { Icon } from '../Icon';
 
 interface CheckboxProps {
   isChecked: boolean;
-  onChange: () => void;
+  onChange: (newCheckedStatus: boolean) => void;
   label: string;
   count: number;
 }
@@ -62,7 +62,7 @@ const StyledIcon = styled(Icon)`
 
 export const Checkbox: React.FC<CheckboxProps> = React.memo(({ isChecked, onChange, label, count, ...rest }) => {
   const handleClick = () => {
-    if (onChange) onChange();
+    if (onChange) onChange(!isChecked);
   };
 
   return (

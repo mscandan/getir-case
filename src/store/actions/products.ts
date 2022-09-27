@@ -8,7 +8,7 @@ import { CompanyType, ProductItemType, SortingType } from 'types';
 import ActionTypes from './types';
 
 export const getAllProducts = () => async (dispatch: Dispatch) => {
-  const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/items`);
+  const { data } = await axios.get(`${API_URL}/items`);
   try {
     dispatch({
       payload: data,
@@ -57,8 +57,8 @@ export const getProducts =
       });
       if (Number(headers['x-total-count']) / PRODUCTS_PER_PAGE <= selectedPageIndex) {
         dispatch({
-          payload: 0,
           type: ActionTypes.SET_PAGINATION_SELECTED_PAGE_INDEX,
+          payload: 0,
         });
       }
     } catch (error) {
@@ -70,8 +70,8 @@ export const getProductsByItemType =
   (products: Array<ProductItemType>, itemType: 'mug' | 'shirt') => async (dispatch: Dispatch) => {
     try {
       dispatch({
-        payload: products.filter(product => product.itemType === itemType),
         type: ActionTypes.GET_PRODUCTS_BY_ITEM_TYPE,
+        payload: products.filter(product => product.itemType === itemType),
       });
     } catch (error) {
       console.error(error);
@@ -80,7 +80,7 @@ export const getProductsByItemType =
 
 export const getProductsCount = (products: Array<ProductItemType>) => async (dispatch: Dispatch) => {
   dispatch({
-    payload: products.length,
     type: ActionTypes.GET_PRODUCTS_COUNT,
+    payload: products.length,
   });
 };

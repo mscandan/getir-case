@@ -6,6 +6,8 @@ import { appTheme } from 'constants/theme';
 import GlobalStyles from 'lib/globalStyles';
 import { store, persistor } from 'store';
 import { Header } from 'layouts/AppLayout/Header';
+import { Products } from 'layouts/AppLayout/Products';
+import { Sidebar } from 'layouts/AppLayout/Sidebar';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +16,8 @@ const App: React.FC = () => {
         <ThemeProvider theme={appTheme}>
           <GlobalStyles />
           <Header />
+          <Sidebar />
+          <Products />
         </ThemeProvider>
       </PersistGate>
     </ReduxProvider>
