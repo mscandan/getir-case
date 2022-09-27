@@ -1,6 +1,6 @@
 /* eslint-disable default-param-last */
-import ActionTypes from 'store/actions/types';
-import { BasketItemType, BasketStateType } from 'types';
+import ActionTypes from '../actions/types';
+import { BasketItemType, BasketStateType } from '../../types';
 
 const InitialState: BasketStateType = {
   isBasketOpen: false,

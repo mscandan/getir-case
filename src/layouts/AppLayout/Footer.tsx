@@ -6,7 +6,7 @@ const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 `;
 
 const StyledLink = styled.a`

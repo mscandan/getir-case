@@ -16,9 +16,10 @@ const GlobalStyles = createGlobalStyle<{ isSidebarOpen?: boolean }>`
     font-family: 'Open Sans', sans-serif;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
     background-color: ${({ theme }) => theme.PAGE_BG.BASE};
 
- ${mediaBreakpointDown(980)} {
+    ${mediaBreakpointDown(980)} {
       overflow: ${({ isSidebarOpen }) => isSidebarOpen && 'hidden'}
     }
   }
