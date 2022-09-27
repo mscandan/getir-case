@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 /* eslint-disable no-console */
 import axios from 'axios';
+import API_URL from 'constants/api';
 import PRODUCTS_PER_PAGE from 'constants/productCount';
 import { Dispatch } from 'redux';
 import { CompanyType, ProductItemType, SortingType } from 'types';
@@ -37,9 +38,9 @@ export const getProducts =
     const tagsQuery = filteredTags.map(tag => `&tags_like=${tag}`).join('');
 
     const { data, headers } = await axios.get(
-      `${process.env.REACT_APP_API_URL}/items?_page=${
-        selectedPageIndex + 1
-      }&_limit=16&itemType=${itemType}${tagsQuery}${brandsQuery}&_sort=${sortingType.value}&_order=${sortingType.type}`,
+      `${API_URL}/items?_page=${selectedPageIndex + 1}&_limit=16&itemType=${itemType}${tagsQuery}${brandsQuery}&_sort=${
+        sortingType.value
+      }&_order=${sortingType.type}`,
     );
 
     dispatch({ type: ActionTypes.SET_PRODUCTS_LOADING, payload: true });

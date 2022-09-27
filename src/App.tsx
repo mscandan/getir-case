@@ -4,7 +4,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { ThemeProvider } from 'styled-components';
 import { appTheme } from 'constants/theme';
 import GlobalStyles from 'lib/globalStyles';
-import { store, persistor } from './store';
+import { store, persistor } from 'store';
 
 const App: React.FC = () => {
   return (

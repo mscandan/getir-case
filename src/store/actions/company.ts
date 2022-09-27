@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 import axios from 'axios';
+import API_URL from 'constants/api';
 import { Dispatch } from 'redux';
 import ActionTypes from './types';
 
 export const getCompanies = () => async (dispatch: Dispatch) => {
-  const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/companies`);
+  const { data } = await axios.get(`${API_URL}/companies`);
   try {
     dispatch({
       payload: data,
