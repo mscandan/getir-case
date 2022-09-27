@@ -2,28 +2,28 @@
 
 exports[`Product Item Tests should match snapshot 1`] = `
 <div
-  className="sc-gicCDI dgNAhD"
+  className="sc-llJcti cYgdPA"
 >
   <div
-    className="sc-ezWOiH cmmpva"
+    className="sc-iIPllB kxtate"
   >
     <div
-      className="sc-jIZahH gYnqMV"
+      className="sc-kLLXSd fQciod"
     >
       <img
-        className="sc-bZkfAO eVwGmA"
+        className="sc-gicCDI bNDIqY"
         src=""
       />
     </div>
   </div>
   <div
-    className="sc-kLLXSd htdLXa"
+    className="sc-ezWOiH ktCmNA"
   >
     ₺ 
     3
   </div>
   <div
-    className="sc-ikZpkk gNzmNp"
+    className="sc-bZkfAO chgbay"
   >
     name
   </div>
