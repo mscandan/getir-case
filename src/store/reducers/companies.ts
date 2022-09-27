@@ -1,10 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from 'store/actions/types';
-import { CompanyType } from 'types';
-
-type CompanyStateType = {
-  allCompanies: Array<CompanyType>;
-};
+import { CompanyStateType, CompanyType } from 'types';
 
 const InitialState: CompanyStateType = {
   allCompanies: [],

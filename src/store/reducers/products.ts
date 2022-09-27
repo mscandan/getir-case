@@ -1,16 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from 'store/actions/types';
-import { ProductItemType, CompanyType } from 'types';
-
-type ProductsStateType = {
-  allProducts: Array<ProductItemType>;
-  products: Array<ProductItemType>;
-  productsLoading: false;
-  filteredProducts: Array<ProductItemType>;
-  productsCount: number;
-  itemType: 'mug' | 'shirt';
-  allBrands: Array<CompanyType>;
-};
+import { ProductItemType, ProductsStateType } from 'types';
 
 const InitialState: ProductsStateType = {
   allProducts: [],

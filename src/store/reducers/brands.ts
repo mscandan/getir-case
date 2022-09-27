@@ -1,12 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from 'store/actions/types';
-import { CompanyType } from 'types';
-
-type BrandStateType = {
-  allBrands: Array<CompanyType>;
-  brands: Array<CompanyType>;
-  selectedBrands: Array<string>;
-};
+import { BrandStateType, CompanyType } from 'types';
 
 type ActionType =
   | { type: ActionTypes.GET_ALL_BRANDS; payload: Array<CompanyType> }

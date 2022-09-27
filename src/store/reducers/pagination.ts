@@ -1,9 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from 'store/actions/types';
-
-type PaginationStateType = {
-  selectedPageIndex: number;
-};
+import { PaginationStateType } from 'types';
 
 const InitialState: PaginationStateType = {
   selectedPageIndex: 0,

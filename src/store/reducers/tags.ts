@@ -1,12 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from 'store/actions/types';
-import { TagType } from 'types';
-
-type TagsStateType = {
-  allTags: Array<TagType>;
-  tags: Array<TagType>;
-  selectedTags: Array<string>;
-};
+import { TagsStateType, TagType } from 'types';
 
 const InitialState: TagsStateType = {
   allTags: [],

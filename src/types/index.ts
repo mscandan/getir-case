@@ -47,4 +47,61 @@ export type SortingType = {
 export type BasketItemType = {
   name: string;
   count: number;
+  price: number;
+};
+
+export type BasketStateType = {
+  isBasketOpen: false;
+  basketList: Array<BasketItemType>;
+  totalPrice: number;
+};
+
+export type BrandStateType = {
+  allBrands: Array<CompanyType>;
+  brands: Array<CompanyType>;
+  selectedBrands: Array<string>;
+};
+
+export type CompanyStateType = {
+  allCompanies: Array<CompanyType>;
+};
+
+export type PaginationStateType = {
+  selectedPageIndex: number;
+};
+
+export type ProductsStateType = {
+  allProducts: Array<ProductItemType>;
+  products: Array<ProductItemType>;
+  productsLoading: false;
+  filteredProducts: Array<ProductItemType>;
+  productsCount: number;
+  itemType: 'mug' | 'shirt';
+  allBrands: Array<CompanyType>;
+};
+
+export type SidebarStateType = {
+  isSidebarOpen: boolean;
+};
+
+export type TagsStateType = {
+  allTags: Array<TagType>;
+  tags: Array<TagType>;
+  selectedTags: Array<string>;
+};
+
+export type SortingStateType = {
+  sortingType: SortingType;
+  selectedSortingId: string;
+};
+
+export type ReduxStateType = {
+  sidebar: SidebarStateType;
+  products: ProductsStateType;
+  pagination: PaginationStateType;
+  basket: BasketStateType;
+  brands: BrandStateType;
+  companies: CompanyStateType;
+  tags: TagsStateType;
+  sorting: SortingStateType;
 };

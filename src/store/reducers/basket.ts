@@ -1,12 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from 'store/actions/types';
-import { BasketItemType } from 'types';
-
-type BasketStateType = {
-  isBasketOpen: false;
-  basketList: Array<BasketItemType>;
-  totalPrice: number;
-};
+import { BasketItemType, BasketStateType } from 'types';
 
 const InitialState: BasketStateType = {
   isBasketOpen: false,
