@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Tests should match snapshot 1`] = `
+<div
+  className="sc-ivTmOn bKJYrZ"
+  tabIndex={0}
+>
+  <div
+    className="sc-cxabCf"
+  >
+    hello
+  </div>
+  <div
+    className="sc-bBrHrO cFvkTe"
+    data-testid="dropdown"
+    tabIndex={0}
+  >
+    <div>
+      this is content
+    </div>
+  </div>
+</div>
+`;
