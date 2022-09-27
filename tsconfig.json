@@ -20,5 +20,5 @@
     "baseUrl": "src"
   },
   "include": ["src", "typings", "__tests__/Button.test.tsx"],
-  "exclude": ["node_modules", "./src/assets", "__tests__"]
+  "exclude": ["node_modules", "./src/assets", "__tests__", "server"]
 }
