@@ -2,7 +2,7 @@
 
 exports[`Pagination Tests should match snapshot 1`] = `
 <ul
-  className="sc-jIZahH bkLTRs"
+  className="sc-jIZahH cBGdcp"
 >
   <li
     className="previous disabled"
