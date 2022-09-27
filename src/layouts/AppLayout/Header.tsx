@@ -13,11 +13,11 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1ea4ce;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+  background-color: ${({ theme }) => theme.COMPONENT_BG.BASE};
 `;
 
 const StyledHeaderInnerWrapper = styled.div`
@@ -46,10 +46,10 @@ const StyledBasketIcon = styled(Icon)`
 const StyledBasket = styled.div`
   width: 129px;
   height: 76.64px;
-  background: #147594;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${({ theme }) => theme.COMPONENT_BG.LOWLIGHT};
 
   ${mediaBreakpointDown(1290)} {
     cursor: pointer;
@@ -68,10 +68,10 @@ const StyledBasketPrice = styled.div`
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.16px;
-  color: #ffffff;
   text-align: center;
   height: 18.39px;
   white-space: nowrap;
+  color: ${({ theme }) => theme.TEXT_LIGHT.HIGHLIGHT};
 `;
 
 const StyledBasketWrapper = styled.div`
@@ -95,17 +95,17 @@ const StyledIcon = styled(Icon)`
     display: block;
     position: absolute;
     left: 20px;
-    stroke: #fff;
     cursor: pointer;
+    stroke: ${({ theme }) => theme.TEXT_LIGHT.HIGHLIGHT};
   }
 
   ${mediaBreakpointDown(500)} {
     display: block;
     margin-right: 20px;
     width: 24px;
-    color: #fff;
     cursor: pointer;
     position: unset;
+    color: ${({ theme }) => theme.TEXT_LIGHT.HIGHLIGHT};
   }
 `;
 
