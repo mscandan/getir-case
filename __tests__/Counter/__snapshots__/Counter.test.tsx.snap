@@ -23,7 +23,7 @@ exports[`Counter Tests should match snapshot 1`] = `
     className="sc-hHLeRK gkGGud"
   >
     <button
-      className="sc-bczRLJ eokieJ sc-fLlhyt bnOgBf"
+      className="sc-bczRLJ bDyXjI sc-fLlhyt bnOgBf"
       data-testid="button"
       onClick={[Function]}
       type="button"
@@ -34,7 +34,7 @@ exports[`Counter Tests should match snapshot 1`] = `
       0
     </div>
     <button
-      className="sc-bczRLJ eokieJ sc-fLlhyt bnOgBf"
+      className="sc-bczRLJ bDyXjI sc-fLlhyt bnOgBf"
       data-testid="button"
       onClick={[Function]}
       type="button"

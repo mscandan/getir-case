@@ -11,6 +11,9 @@ const StyledButton = styled.button`
   font-weight: 600;
   font-size: 12px;
   line-height: 20px;
+  outline: none;
+  border: none;
+  width: 100%;
   background-color: ${({ theme }) => theme.COMPONENT_BG.BASE};
   color: ${({ theme }) => theme.TEXT_LIGHT.HIGHLIGHT};
 

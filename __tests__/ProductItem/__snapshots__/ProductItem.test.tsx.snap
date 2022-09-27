@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Item Tests should match snapshot 1`] = `
+<div
+  className="sc-gicCDI dgNAhD"
+>
+  <div
+    className="sc-ezWOiH cmmpva"
+  >
+    <div
+      className="sc-jIZahH gYnqMV"
+    >
+      <img
+        className="sc-bZkfAO eVwGmA"
+        src=""
+      />
+    </div>
+  </div>
+  <div
+    className="sc-kLLXSd htdLXa"
+  >
+    ₺ 
+    3
+  </div>
+  <div
+    className="sc-ikZpkk gNzmNp"
+  >
+    name
+  </div>
+  <button
+    className="sc-bczRLJ bDyXjI"
+    data-testid="button"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    Add
+  </button>
+</div>
+`;

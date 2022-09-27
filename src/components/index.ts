@@ -8,5 +8,6 @@ import { Input } from './Input';
 import { Counter } from './Counter';
 import { Dropdown } from './Dropdown';
 import { LoadingSpinner } from './LoadingSpinner';
+import { ProductItem } from './ProductItem';
 
-export { Button, Checkbox, Radios, Icon, Card, ButtonGroup, Input, Counter, Dropdown, LoadingSpinner };
+export { Button, Checkbox, Radios, Icon, Card, ButtonGroup, Input, Counter, Dropdown, LoadingSpinner, ProductItem };
