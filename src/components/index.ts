@@ -9,5 +9,19 @@ import { Counter } from './Counter';
 import { Modal } from './Modal';
 import { LoadingSpinner } from './LoadingSpinner';
 import { ProductItem } from './ProductItem';
+import { Pagination } from './Pagination';
 
-export { Button, Checkbox, Radios, Icon, Card, ButtonGroup, Input, Counter, Modal, LoadingSpinner, ProductItem };
+export {
+  Button,
+  Checkbox,
+  Radios,
+  Icon,
+  Card,
+  ButtonGroup,
+  Input,
+  Counter,
+  Modal,
+  LoadingSpinner,
+  ProductItem,
+  Pagination,
+};

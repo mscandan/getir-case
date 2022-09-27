@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination Tests should match snapshot 1`] = `
+<ul
+  className="sc-jIZahH bkLTRs"
+>
+  <li
+    className="previous disabled"
+  >
+    <a
+      aria-disabled="true"
+      aria-label="Previous page"
+      className=" "
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      rel="prev"
+      role="button"
+      tabIndex="-1"
+    >
+      <div
+        className="sc-ikZpkk btchlR"
+      >
+        <div
+          className="sc-himrzO hAGDXI"
+        >
+          Prev
+        </div>
+      </div>
+    </a>
+  </li>
+  <li
+    className="rp-page selected"
+  >
+    <a
+      aria-current="page"
+      aria-label="Page 1 is your current page"
+      className="rp-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      rel="active"
+      role="button"
+      tabIndex="-1"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="rp-page"
+  >
+    <a
+      aria-current={null}
+      aria-label="Page 2"
+      className="rp-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      rel="next"
+      role="button"
+      tabIndex="0"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="rp-page"
+  >
+    <a
+      aria-current={null}
+      aria-label="Page 3"
+      className="rp-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="rp-break"
+  >
+    <a
+      className="rp-break-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="0"
+    />
+  </li>
+  <li
+    className="rp-page"
+  >
+    <a
+      aria-current={null}
+      aria-label="Page 8"
+      className="rp-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      8
+    </a>
+  </li>
+  <li
+    className="rp-page"
+  >
+    <a
+      aria-current={null}
+      aria-label="Page 9"
+      className="rp-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      9
+    </a>
+  </li>
+  <li
+    className="rp-page"
+  >
+    <a
+      aria-current={null}
+      aria-label="Page 10"
+      className="rp-link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      10
+    </a>
+  </li>
+  <li
+    className="next"
+  >
+    <a
+      aria-disabled="false"
+      aria-label="Next page"
+      className=""
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      rel="next"
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="sc-ikZpkk btchlR"
+      >
+        <div
+          className="sc-himrzO hAGDXI"
+        >
+          Next
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+`;
