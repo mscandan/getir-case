@@ -9,7 +9,7 @@ import { ReduxStateType } from 'types';
 
 interface BasketListProps {
   className?: string;
-  basketRef: React.RefObject<HTMLDivElement>;
+  basketRef?: React.RefObject<HTMLDivElement>;
 }
 
 const StyledBasketList = styled.div`

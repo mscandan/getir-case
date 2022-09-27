@@ -74,4 +74,5 @@ export const StyledIcon = styled(Icon)<{ name: string }>`
 
 export const StyledCountActionButton = styled(Button)`
   background-color: transparent;
+  width: 12px;
 `;
