@@ -31,7 +31,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'jsx-a11y'],
-  ignorePatterns: ['src/assets/**/*', 'server'],
+  ignorePatterns: ['src/assets/**/*', 'server', 'src/**/*.stories.tsx'],
   rules: {
     'prettier/prettier': [
       'error',
