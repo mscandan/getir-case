@@ -8,7 +8,10 @@ const InitialState: PaginationStateType = {
 
 type ActionType = { type: ActionTypes.SET_PAGINATION_SELECTED_PAGE_INDEX; payload: number };
 
-export const paginationReducer = (state: PaginationStateType = InitialState, action: ActionType) => {
+export const paginationReducer = (
+  state: PaginationStateType = InitialState,
+  action: ActionType,
+): PaginationStateType => {
   switch (action.type) {
     case ActionTypes.SET_PAGINATION_SELECTED_PAGE_INDEX:
       return {

@@ -8,17 +8,17 @@ const InitialState: SidebarStateType = {
 
 type ActionType = { type: ActionTypes.SET_TOGGLE_SIDEBAR } | { type: ActionTypes.SET_CLOSE_SIDEBAR };
 
-export const sidebarReducer = (state: SidebarStateType = InitialState, action: ActionType) => {
+export const sidebarReducer = (state: SidebarStateType = InitialState, action: ActionType): SidebarStateType => {
   switch (action.type) {
     case ActionTypes.SET_TOGGLE_SIDEBAR:
       return {
         ...state,
-        sidebarIsOpen: !state.isSidebarOpen,
+        isSidebarOpen: !state.isSidebarOpen,
       };
     case ActionTypes.SET_CLOSE_SIDEBAR:
       return {
         ...state,
-        sidebarIsOpen: false,
+        isSidebarOpen: false,
       };
 
     default:

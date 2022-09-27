@@ -51,7 +51,7 @@ export type BasketItemType = {
 };
 
 export type BasketStateType = {
-  isBasketOpen: false;
+  isBasketOpen: boolean;
   basketList: Array<BasketItemType>;
   totalPrice: number;
 };
@@ -73,7 +73,7 @@ export type PaginationStateType = {
 export type ProductsStateType = {
   allProducts: Array<ProductItemType>;
   products: Array<ProductItemType>;
-  productsLoading: false;
+  isProductsLoading: boolean;
   filteredProducts: Array<ProductItemType>;
   productsCount: number;
   itemType: 'mug' | 'shirt';

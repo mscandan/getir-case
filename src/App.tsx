@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { appTheme } from 'constants/theme';
 import GlobalStyles from 'lib/globalStyles';
 import { store, persistor } from 'store';
+import { Header } from 'layouts/AppLayout/Header';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <PersistGate persistor={persistor}>
         <ThemeProvider theme={appTheme}>
           <GlobalStyles />
+          <Header />
         </ThemeProvider>
       </PersistGate>
     </ReduxProvider>

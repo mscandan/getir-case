@@ -34,7 +34,7 @@ const includeSelectedTagsHelper = (selectedTags: TagsStateType['selectedTags'], 
   return [...selectedTags, payload];
 };
 
-export const tagsReducer = (state: TagsStateType = InitialState, action: ActionType) => {
+export const tagsReducer = (state: TagsStateType = InitialState, action: ActionType): TagsStateType => {
   switch (action.type) {
     case ActionTypes.GET_ALL_TAGS:
       return {

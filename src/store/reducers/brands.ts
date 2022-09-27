@@ -24,7 +24,7 @@ const includeSelectedBrandsHelper = (selectedBrands: BrandStateType['selectedBra
   return [...selectedBrands, payload];
 };
 
-export const brandsReducer = (state: BrandStateType = initialState, action: ActionType) => {
+export const brandsReducer = (state: BrandStateType = initialState, action: ActionType): BrandStateType => {
   switch (action.type) {
     case ActionTypes.GET_ALL_BRANDS:
       return {

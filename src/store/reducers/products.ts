@@ -5,7 +5,7 @@ import { ProductItemType, ProductsStateType } from 'types';
 const InitialState: ProductsStateType = {
   allProducts: [],
   products: [],
-  productsLoading: false,
+  isProductsLoading: false,
   filteredProducts: [],
   productsCount: 0,
   itemType: 'mug',
@@ -35,7 +35,7 @@ type ActionType =
       payload: boolean;
     };
 
-export const productsReducer = (state: ProductsStateType = InitialState, action: ActionType) => {
+export const productsReducer = (state: ProductsStateType = InitialState, action: ActionType): ProductsStateType => {
   switch (action.type) {
     case ActionTypes.GET_PRODUCTS:
       return {
@@ -51,7 +51,7 @@ export const productsReducer = (state: ProductsStateType = InitialState, action:
     case ActionTypes.GET_PRODUCTS_BY_ITEM_TYPE:
       return { ...state, filteredProducts: action.payload };
     case ActionTypes.SET_PRODUCTS_LOADING:
-      return { ...state, productsLoading: action.payload };
+      return { ...state, isProductsLoading: action.payload };
     default:
       return state;
   }

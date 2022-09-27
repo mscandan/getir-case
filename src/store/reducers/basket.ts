@@ -16,12 +16,12 @@ type ActionType =
   | { type: ActionTypes.SET_BASKET_TOTAL_PRICE; payload: number }
   | { type: ActionTypes.REMOVE_FROM_BASKET_LIST; payload: string };
 
-export const basketReducer = (state: BasketStateType = InitialState, action: ActionType) => {
+export const basketReducer = (state: BasketStateType = InitialState, action: ActionType): BasketStateType => {
   switch (action.type) {
     case ActionTypes.SET_TOGGLE_BASKET:
       return {
         ...state,
-        basketIsOpen: !state.isBasketOpen,
+        isBasketOpen: !state.isBasketOpen,
       };
     case ActionTypes.SET_BASKET_LIST:
       return {

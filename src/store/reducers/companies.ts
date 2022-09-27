@@ -8,7 +8,7 @@ const InitialState: CompanyStateType = {
 
 type ActionType = { type: ActionTypes.GET_ALL_COMPANIES; payload: Array<CompanyType> };
 
-export const companiesReducer = (state: CompanyStateType = InitialState, action: ActionType) => {
+export const companiesReducer = (state: CompanyStateType = InitialState, action: ActionType): CompanyStateType => {
   switch (action.type) {
     case ActionTypes.GET_ALL_COMPANIES:
       return {
