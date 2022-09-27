@@ -33,3 +33,18 @@ export type ProductItemType = {
   manufacturer: string;
   itemType: 'mug' | 'shirt';
 };
+
+export type TagType = {
+  name: string;
+  count: number;
+};
+
+export type SortingType = {
+  value: 'price' | 'date';
+  type: 'asc' | 'desc';
+};
+
+export type BasketItemType = {
+  name: string;
+  count: number;
+};
