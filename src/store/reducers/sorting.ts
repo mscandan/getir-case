@@ -1,6 +1,6 @@
 /* eslint-disable default-param-last */
-import ActionTypes from 'store/actions/types';
-import { SortingStateType, SortingType } from 'types';
+import ActionTypes from '../actions/types';
+import { SortingStateType, SortingType } from '../../types';
 
 const InitialState: SortingStateType = {
   sortingType: { value: 'price', type: 'asc' },
