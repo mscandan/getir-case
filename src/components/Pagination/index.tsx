@@ -6,11 +6,16 @@ import * as styles from './styles';
 interface PaginationProps {
   pageCount: number;
   selectedPageIndex: number;
-  onChange: (newSelectedValue: number) => void;
+  onSelectedPageIndexChange: (newSelectedValue: number) => void;
 }
 
-export const Pagination: React.FC<PaginationProps> = ({ pageCount, onChange, selectedPageIndex = 0, ...rest }) => {
-  const handlePageClick = (event: { selected: number }) => onChange(event.selected);
+export const Pagination: React.FC<PaginationProps> = ({
+  pageCount,
+  onSelectedPageIndexChange,
+  selectedPageIndex = 0,
+  ...rest
+}) => {
+  const handlePageClick = (event: { selected: number }) => onSelectedPageIndexChange(event.selected);
 
   const getLabel = React.useCallback((isNextPage: boolean) => {
     return (

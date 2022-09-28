@@ -80,7 +80,7 @@ const StyledBackgroundFilter = styled.div<{ isOpen: boolean }>`
     height: 100%;
     width: 100%;
     z-index: 1;
-    background: ${({ theme }) => theme.COMPONENT_BG.BASE};
+    background: ${({ theme }) => theme.TEXT_DARK.BASE};
     opacity: ${({ isOpen }) => (isOpen ? '0.5' : '0')};
     visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
     transition: ${({ isOpen }) => isOpen && '0.2s opacity'};
@@ -125,7 +125,11 @@ export const Sidebar: React.FC = () => {
     <>
       <StyledSidebar isOpen={isSidebarOpen}>
         <StyledCard title="Sorting" size="sm">
-          <StyledRadios data={SORTING_OPTIONS} onChange={handleOnChangeSorting} selectedOptionId={selectedSortingId} />
+          <StyledRadios
+            data={SORTING_OPTIONS}
+            onSelectedRadioChange={handleOnChangeSorting}
+            selectedOptionId={selectedSortingId}
+          />
         </StyledCard>
         <StyledCard title="Brands" size="sm">
           <StyledInput

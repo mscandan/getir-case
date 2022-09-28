@@ -13,14 +13,14 @@ const ButtonGroupData = [
 describe('Button Group Tests', () => {
   it('should match snapshot', () => {
     const comp = renderer.create(
-      componentRenderer(<ButtonGroup data={ButtonGroupData} onChange={jest.fn()} selectedButtonId="0" />),
+      componentRenderer(<ButtonGroup data={ButtonGroupData} onSelectedButtonChange={jest.fn()} selectedButtonId="0" />),
     );
     expect(comp).toMatchSnapshot();
   });
 
   it('should render first button as selected', () => {
     const { getByText } = render(
-      componentRenderer(<ButtonGroup data={ButtonGroupData} onChange={jest.fn()} selectedButtonId="0" />),
+      componentRenderer(<ButtonGroup data={ButtonGroupData} onSelectedButtonChange={jest.fn()} selectedButtonId="0" />),
     );
     const firstButton = getByText('button 0');
     const secondButton = getByText('button 1');
@@ -31,7 +31,7 @@ describe('Button Group Tests', () => {
   it('should trigger given function on clicking on unselected button', () => {
     const onChange = jest.fn();
     const { getByText } = render(
-      componentRenderer(<ButtonGroup data={ButtonGroupData} onChange={onChange} selectedButtonId="0" />),
+      componentRenderer(<ButtonGroup data={ButtonGroupData} onSelectedButtonChange={onChange} selectedButtonId="0" />),
     );
     const secondButton = getByText('button 1');
     fireEvent.click(secondButton);

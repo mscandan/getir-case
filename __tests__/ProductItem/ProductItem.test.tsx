@@ -7,7 +7,7 @@ import { ProductItem } from '../../src/components';
 describe('Product Item Tests', () => {
   it('should match snapshot', () => {
     const comp = renderer.create(
-      componentRenderer(<ProductItem imageSource="" itemName="name" itemPrice={3} onClick={jest.fn()} />),
+      componentRenderer(<ProductItem imageSource="" name="name" price={3} onAddButtonClick={jest.fn()} />),
     );
     expect(comp).toMatchSnapshot();
   });
@@ -15,7 +15,7 @@ describe('Product Item Tests', () => {
   it('should trigger given onClick function on click', () => {
     const onClick = jest.fn();
     const { getByRole } = render(
-      componentRenderer(<ProductItem imageSource="" itemName="name" itemPrice={3} onClick={onClick} />),
+      componentRenderer(<ProductItem imageSource="" name="name" price={3} onAddButtonClick={onClick} />),
     );
     const addBtn = getByRole('button');
     fireEvent.click(addBtn);

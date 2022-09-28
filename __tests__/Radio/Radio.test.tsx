@@ -14,7 +14,7 @@ const RadioItems = [
 describe('Radio Button Tests', () => {
   it('should match the snapshot with the unchecked radio button', () => {
     const comp = renderer.create(
-      componentRenderer(<Radios data={RadioItems} onChange={jest.fn()} selectedOptionId="0" />),
+      componentRenderer(<Radios data={RadioItems} onSelectedRadioChange={jest.fn()} selectedOptionId="0" />),
     );
 
     expect(comp).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('Radio Button Tests', () => {
   it('should invoke the given function on click', () => {
     const onChange = jest.fn();
     const { getByTestId } = render(
-      componentRenderer(<Radios data={RadioItems} onChange={onChange} selectedOptionId="0" />),
+      componentRenderer(<Radios data={RadioItems} onSelectedRadioChange={onChange} selectedOptionId="0" />),
     );
 
     const radioEl = getByTestId('radio-2');

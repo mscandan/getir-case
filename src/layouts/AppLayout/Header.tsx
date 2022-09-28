@@ -126,13 +126,9 @@ const StyledMenuWrapper = styled.div`
 export const Header: React.FC = () => {
   const basketListRef = React.useRef(null);
   const dispatch = useDispatch();
-  const { totalPrice, isBasketOpen } = useSelector((state: ReduxStateType) => state.basket);
+  const { totalPrice } = useSelector((state: ReduxStateType) => state.basket);
   const { isSidebarOpen } = useSelector((state: ReduxStateType) => state.sidebar);
-  const [isModalOpen, setIsModalOpen] = React.useState(isBasketOpen);
-
-  React.useEffect(() => {
-    setIsModalOpen(isBasketOpen);
-  }, [isBasketOpen]);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
     <StyledHeader>
@@ -146,7 +142,7 @@ export const Header: React.FC = () => {
           <StyledLogoIcon name="logo" />
         </StyledMenuWrapper>
         <StyledBasketWrapper>
-          <StyledBasket onClick={() => dispatch({ type: ActionTypes.SET_TOGGLE_BASKET })}>
+          <StyledBasket onClick={() => setIsModalOpen(oldValue => !oldValue)}>
             <StyledBasketInnerWrapper>
               <StyledBasketIcon name="basket" />
               <StyledBasketPrice>₺ {totalPrice}</StyledBasketPrice>

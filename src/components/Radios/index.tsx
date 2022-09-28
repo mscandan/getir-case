@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 
 interface RadiosProps {
   data: Array<RadiosDataType>;
-  onChange: (newSelectedId: string) => void;
+  onSelectedRadioChange: (newSelectedId: string) => void;
   selectedOptionId: string;
 }
 
@@ -47,12 +47,12 @@ const StyledIcon = styled(Icon)`
   stroke: ${({ theme }) => theme.COMPONENT_BG.BASE};
 `;
 
-export const Radios: React.FC<RadiosProps> = ({ data, onChange, selectedOptionId, ...rest }) => {
+export const Radios: React.FC<RadiosProps> = ({ data, onSelectedRadioChange, selectedOptionId, ...rest }) => {
   const [selectedRadioId, setSelectedRadioId] = React.useState(selectedOptionId);
 
   const handleClick = (id: string) => {
     setSelectedRadioId(id);
-    if (onChange) onChange(id);
+    if (onSelectedRadioChange) onSelectedRadioChange(id);
   };
 
   return (

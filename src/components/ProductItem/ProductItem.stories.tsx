@@ -18,10 +18,10 @@ storiesOf('Product Item', module).add('Product Item Component', () => {
       <GlobalStyles />
       <ProductItem
         imageSource="https://picsum.photos/200/200"
-        itemPrice={2}
-        itemName="product name"
+        price={2}
+        name="product name"
         // eslint-disable-next-line no-console
-        onClick={() => console.log('here')}
+        onAddButtonClick={() => console.log('here')}
       />
     </Container>
   );

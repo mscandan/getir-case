@@ -23,7 +23,7 @@ const StyledDot = styled.div`
   color: ${({ theme }) => theme.COMPONENT_BG.BASE};
 `;
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <StyledLink href="#">©2019 Market</StyledLink>

@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Button } from '../Button';
 
 interface ProductItemProps {
-  itemPrice: number;
+  price: number;
+  name: string;
   imageSource: string;
-  itemName: string;
-  onClick: (e: React.MouseEvent) => void;
+  onAddButtonClick: (e: React.MouseEvent) => void;
 }
 
 const StyledProductCard = styled.div`
@@ -56,7 +56,7 @@ const StyledImageInnerWrapper = styled.div`
 `;
 
 export const ProductItem: React.FC<ProductItemProps> = React.memo(
-  ({ itemPrice, imageSource, itemName, onClick, ...rest }) => {
+  ({ price, imageSource, name, onAddButtonClick, ...rest }) => {
     return (
       <StyledProductCard {...rest}>
         <StyledImageWrapper>
@@ -64,9 +64,9 @@ export const ProductItem: React.FC<ProductItemProps> = React.memo(
             <StyledImage src={imageSource} />
           </StyledImageInnerWrapper>
         </StyledImageWrapper>
-        <StyledProductPrice>₺ {itemPrice}</StyledProductPrice>
-        <StyledProductName>{itemName}</StyledProductName>
-        <Button onClick={onClick}>Add</Button>
+        <StyledProductPrice>₺ {price}</StyledProductPrice>
+        <StyledProductName>{name}</StyledProductName>
+        <Button onClick={onAddButtonClick}>Add</Button>
       </StyledProductCard>
     );
   },

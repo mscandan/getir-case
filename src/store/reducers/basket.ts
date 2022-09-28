@@ -3,13 +3,11 @@ import ActionTypes from '../actions/types';
 import { BasketItemType, BasketStateType } from '../../types';
 
 const InitialState: BasketStateType = {
-  isBasketOpen: false,
   basketList: [],
   totalPrice: 0,
 };
 
 type ActionType =
-  | { type: ActionTypes.SET_TOGGLE_BASKET }
   | { type: ActionTypes.SET_BASKET_LIST; payload: BasketItemType }
   | { type: ActionTypes.INCREASE_BASKET_ITEM_QUANTITY; payload: string }
   | { type: ActionTypes.SET_BASKET_ITEM_QUANTITY; payload: BasketItemType }
@@ -18,11 +16,6 @@ type ActionType =
 
 export const basketReducer = (state: BasketStateType = InitialState, action: ActionType): BasketStateType => {
   switch (action.type) {
-    case ActionTypes.SET_TOGGLE_BASKET:
-      return {
-        ...state,
-        isBasketOpen: !state.isBasketOpen,
-      };
     case ActionTypes.SET_BASKET_LIST:
       return {
         ...state,

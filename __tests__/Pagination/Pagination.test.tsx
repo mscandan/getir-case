@@ -7,7 +7,7 @@ import { Pagination } from '../../src/components';
 describe('Pagination Tests', () => {
   it('should match snapshot', () => {
     const comp = renderer.create(
-      componentRenderer(<Pagination pageCount={10} selectedPageIndex={0} onChange={jest.fn()} />),
+      componentRenderer(<Pagination pageCount={10} selectedPageIndex={0} onSelectedPageIndexChange={jest.fn()} />),
     );
     expect(comp).toMatchSnapshot();
   });
@@ -15,7 +15,7 @@ describe('Pagination Tests', () => {
   it('should trigger given onChange function on page number click', () => {
     const onChange = jest.fn();
     const { queryAllByRole } = render(
-      componentRenderer(<Pagination pageCount={10} selectedPageIndex={0} onChange={onChange} />),
+      componentRenderer(<Pagination pageCount={10} selectedPageIndex={0} onSelectedPageIndexChange={onChange} />),
     );
     const buttons = queryAllByRole('button');
     expect(buttons.length).toEqual(9);

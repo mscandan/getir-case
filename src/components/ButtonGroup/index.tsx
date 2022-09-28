@@ -5,7 +5,7 @@ import { Button } from '../Button';
 
 interface ButtonGroupProps {
   data: Array<ButtonGroupDataType>;
-  onChange: (newSelectedButton: ButtonGroupDataType) => void;
+  onSelectedButtonChange: (newSelectedButton: ButtonGroupDataType) => void;
   selectedButtonId?: string;
 }
 
@@ -24,12 +24,17 @@ const StyledButton = styled(Button)<{ isSelected: boolean }>`
   color: ${({ isSelected, theme }) => (isSelected ? theme.TEXT_LIGHT.HIGHLIGHT : theme.COMPONENT_BG.BASE)};
 `;
 
-export const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, onChange, selectedButtonId, ...rest }) => {
+export const ButtonGroup: React.FC<ButtonGroupProps> = ({
+  data,
+  onSelectedButtonChange,
+  selectedButtonId,
+  ...rest
+}) => {
   const [activeButtonId, setActiveButtonId] = React.useState(selectedButtonId ?? data[0].id);
 
   const handleOnClick = (id: string, label: string) => {
     setActiveButtonId(id);
-    if (onChange) onChange({ id, label });
+    if (onSelectedButtonChange) onSelectedButtonChange({ id, label });
   };
 
   return (

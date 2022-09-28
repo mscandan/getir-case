@@ -142,7 +142,7 @@ export const Products = () => {
       <StyledProductTitle>Products</StyledProductTitle>
       <StyledButtonGroup
         data={ITEM_TYPES}
-        onChange={({ label }) => {
+        onSelectedButtonChange={({ label }) => {
           dispatch({ type: ActionTypes.SET_PRODUCTS_ITEM_TYPE, payload: label });
         }}
         selectedButtonId={itemType}
@@ -152,10 +152,10 @@ export const Products = () => {
           ? products.map(product => (
               <StyledProductCard
                 key={product.added}
-                itemName={product.name}
-                itemPrice={product.price}
+                name={product.name}
+                price={product.price}
                 imageSource="https://picsum.photos/200/200"
-                onClick={() => handleOnClick(product)}
+                onAddButtonClick={() => handleOnClick(product)}
               />
             ))
           : 'No items'}
@@ -164,7 +164,9 @@ export const Products = () => {
       <StyledPagination
         pageCount={Math.ceil(productsCount / PRODUCTS_PER_PAGE)}
         selectedPageIndex={selectedPageIndex}
-        onChange={pageIndex => dispatch({ type: ActionTypes.SET_PAGINATION_SELECTED_PAGE_INDEX, payload: pageIndex })}
+        onSelectedPageIndexChange={pageIndex =>
+          dispatch({ type: ActionTypes.SET_PAGINATION_SELECTED_PAGE_INDEX, payload: pageIndex })
+        }
       />
     </StyledProducts>
   );

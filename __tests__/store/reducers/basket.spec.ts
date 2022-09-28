@@ -5,11 +5,7 @@ import { BasketStateType } from '../../../src/types';
 describe('basket reducer tests', () => {
   let initialState: BasketStateType = {} as BasketStateType;
   beforeEach(() => {
-    initialState = { isBasketOpen: false, basketList: [], totalPrice: 0 };
-  });
-  it('should toogle basket open state', () => {
-    const res = basketReducer(initialState, { type: ActionTypes.SET_TOGGLE_BASKET });
-    expect(res.isBasketOpen).toEqual(true);
+    initialState = { basketList: [], totalPrice: 0 };
   });
   it('should add item to basket', () => {
     const res = basketReducer(initialState, {

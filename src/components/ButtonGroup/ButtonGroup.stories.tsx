@@ -29,7 +29,7 @@ storiesOf('ButtonGroup', module).add('Button Group Component', () => {
   return (
     <Container>
       <GlobalStyles />
-      <ButtonGroup data={ButtonGroupData} onChange={handleOnChange} selectedButtonId={selectedButtonId} />
+      <ButtonGroup data={ButtonGroupData} onSelectedButtonChange={handleOnChange} selectedButtonId={selectedButtonId} />
     </Container>
   );
 });

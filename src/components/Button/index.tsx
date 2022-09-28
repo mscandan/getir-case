@@ -22,7 +22,7 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren> = React.memo(
+export const Button: React.FC<React.PropsWithChildren<React.ButtonHTMLAttributes<HTMLButtonElement>>> = React.memo(
   ({ children, onClick, type = 'button', ...rest }) => {
     return (
       <StyledButton type={type} onClick={onClick} {...rest} data-testid="button">

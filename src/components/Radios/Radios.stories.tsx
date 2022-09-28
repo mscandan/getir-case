@@ -29,7 +29,7 @@ storiesOf('Radio', module).add('Radio Component', () => {
   return (
     <Container>
       <GlobalStyles />
-      <Radios data={RadioItems} onChange={handleRadioSelectionChange} selectedOptionId={selectedRadioId} />
+      <Radios data={RadioItems} onSelectedRadioChange={handleRadioSelectionChange} selectedOptionId={selectedRadioId} />
     </Container>
   );
 });

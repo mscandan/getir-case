@@ -52,7 +52,6 @@ export type BasketItemType = {
 };
 
 export type BasketStateType = {
-  isBasketOpen: boolean;
   basketList: Array<BasketItemType>;
   totalPrice: number;
 };

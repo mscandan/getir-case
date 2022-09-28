@@ -16,7 +16,7 @@ storiesOf('Pagination', module).add('Pagination Component', () => {
   return (
     <Container>
       <GlobalStyles />
-      <Pagination pageCount={10} selectedPageIndex={0} onChange={(idx: number) => console.log(idx)} />
+      <Pagination pageCount={10} selectedPageIndex={0} onSelectedPageIndexChange={(idx: number) => console.log(idx)} />
     </Container>
   );
 });
