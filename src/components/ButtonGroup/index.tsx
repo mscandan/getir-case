@@ -1,12 +1,13 @@
+/* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
 import { ButtonGroupDataType } from 'types';
 import { Button } from '../Button';
 
 interface ButtonGroupProps {
-  data: Array<ButtonGroupDataType>;
-  onSelectedButtonChange: (newSelectedButton: ButtonGroupDataType) => void;
-  selectedButtonId?: string;
+  data: Array<ButtonGroupDataType>; // button's to render on the screen
+  onSelectedButtonChange: (newSelectedButton: ButtonGroupDataType) => void; // function to invoke on choosing new selected button
+  selectedButtonId?: string; // selected button id, default is given data's [0] element's id
 }
 
 const StyledButtonGroup = styled.div`

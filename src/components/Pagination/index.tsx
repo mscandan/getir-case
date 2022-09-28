@@ -4,9 +4,9 @@ import { Icon } from '../Icon';
 import * as styles from './styles';
 
 interface PaginationProps {
-  pageCount: number;
-  selectedPageIndex: number;
-  onSelectedPageIndexChange: (newSelectedValue: number) => void;
+  pageCount: number; // total page count
+  selectedPageIndex: number; // currently selected page index
+  onSelectedPageIndexChange: (newSelectedValue: number) => void; // function to invoke on selecting new pagination page
 }
 
 export const Pagination: React.FC<PaginationProps> = ({

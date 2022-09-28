@@ -1,14 +1,13 @@
-export type RadiosDataType = {
+type CommonDataType = {
   id: string;
   label: string;
 };
+
+export type RadiosDataType = CommonDataType;
 
 export type CardSizeType = 'sm' | 'lg';
 
-export type ButtonGroupDataType = {
-  id: string;
-  label: string;
-};
+export type ButtonGroupDataType = CommonDataType;
 
 export type MediaBreakpointType = 'mobile' | 'tablet' | 'desktop';
 

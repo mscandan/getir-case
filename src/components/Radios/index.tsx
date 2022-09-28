@@ -4,9 +4,9 @@ import { RadiosDataType } from 'types';
 import { Icon } from '../Icon';
 
 interface RadiosProps {
-  data: Array<RadiosDataType>;
-  onSelectedRadioChange: (newSelectedId: string) => void;
-  selectedOptionId: string;
+  data: Array<RadiosDataType>; // radios data to render
+  onSelectedRadioChange: (newSelectedId: string) => void; // function to invoke change of selected radio
+  selectedOptionId: string; // currently selected radio's id
 }
 
 const StyledRadiosContent = styled.div``;

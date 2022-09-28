@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Button } from '../Button';
 
 interface ProductItemProps {
-  price: number;
-  name: string;
-  imageSource: string;
-  onAddButtonClick: (e: React.MouseEvent) => void;
+  price: number; // price of the item
+  name: string; // name of the item
+  imageSource: string; // image source of the item
+  onAddButtonClick: (e: React.MouseEvent) => void; // function to invoke on click on add button
 }
 
 const StyledProductCard = styled.div`

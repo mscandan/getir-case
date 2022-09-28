@@ -1,25 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
+import { isGivenParameterNumber } from './utils';
 
+type StylingPropertyType = number | string | undefined;
 interface ModalProps {
-  isOpen: boolean;
-  setIsOpen: (newOpenStatus: boolean) => void;
-  top?: number;
-  bottom?: number;
-  right?: number;
-  left?: number;
+  isOpen: boolean; // modal's open status
+  setIsOpen: (newOpenStatus: boolean) => void; // function to control modal's open status
+  // positioning styles
+  top?: StylingPropertyType;
+  bottom?: StylingPropertyType;
+  right?: StylingPropertyType;
+  left?: StylingPropertyType;
 }
 
-const StyledModalContainer = styled.div<{ top?: number; bottom?: number; right?: number; left?: number }>`
+const StyledModalContainer = styled.div<{
+  top: StylingPropertyType;
+  bottom: StylingPropertyType;
+  right: StylingPropertyType;
+  left: StylingPropertyType;
+}>`
   position: absolute;
-  top: ${({ top }) => top && `${top}px`};
-  bottom: ${({ bottom }) => bottom && `${bottom}px`};
-  right: ${({ right }) => right && `${right}px`};
-  left: ${({ left }) => left && `${left}px`};
+  top: ${({ top }) => (top && isGivenParameterNumber(top) ? `${top}px` : `${top}`)};
+  bottom: ${({ bottom }) => (bottom && isGivenParameterNumber(bottom) ? `${bottom}px` : `${bottom}`)};
+  right: ${({ right }) => (right && isGivenParameterNumber(right) ? `${right}px` : `${right}`)};
+  left: ${({ left }) => (left && isGivenParameterNumber(left) ? `${left}px` : `${left}`)};
 `;
 
-export const Modal: React.FC<ModalProps & React.PropsWithChildren> = ({
+export const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
   isOpen,
   setIsOpen,
   top,

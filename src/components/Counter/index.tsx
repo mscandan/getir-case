@@ -2,10 +2,10 @@ import React from 'react';
 import * as styles from './styles';
 
 interface CounterProps {
-  name: string;
-  price: number;
-  itemCount: number;
-  onCountChange: (newNumber: number) => void;
+  name: string; // name of the counter item
+  price: number; // price of the counter item
+  itemCount: number; // current item count of the counter item
+  onCountChange: (newNumber: number) => void; // function to invoke on count number change
 }
 
 export const Counter: React.FC<CounterProps> = ({ name, price, itemCount, onCountChange, ...rest }) => {

@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Icon } from '../Icon';
 
 interface CheckboxProps {
-  isChecked: boolean;
-  onChange: (newCheckedStatus: boolean) => void;
-  label: string;
-  count: number;
+  isChecked: boolean; // checked status of chechbox
+  onChange: (newCheckedStatus: boolean) => void; // function to invoke on check status change
+  label: string; // label of the checkbox
+  count: number; // count of the checkbox
 }
 
 const StyledCheckbox = styled.div<{ isChecked: boolean }>`

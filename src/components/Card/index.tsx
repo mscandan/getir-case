@@ -4,8 +4,8 @@ import { CardSizeType } from 'types';
 import { getCardWidth } from './utils';
 
 interface CardProps {
-  title: string;
-  size: CardSizeType;
+  title: string; // title of the card
+  size: CardSizeType; // size of the card
 }
 
 const StyledCardContainer = styled.div``;

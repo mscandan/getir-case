@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  placeholder: string;
+  placeholder: string; // placeholder of the input
 }
 
 const StyledInputContainer = styled.div``;

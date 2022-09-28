@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle<{ isSidebarOpen?: boolean }>`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgb(224, 224, 224);
+    background: ${({ theme }) => theme.TEXT_DARK.HIGHLIGHT};
     border-radius: 4px;
   }
 
