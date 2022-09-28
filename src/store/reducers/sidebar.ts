@@ -1,6 +1,6 @@
 /* eslint-disable default-param-last */
-import ActionTypes from 'store/actions/types';
-import { SidebarStateType } from 'types';
+import ActionTypes from '../actions/types';
+import { SidebarStateType } from '../../types';
 
 const InitialState: SidebarStateType = {
   isSidebarOpen: false,
