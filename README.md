@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Products App for Getir Case Study
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,18 +29,132 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `yarn storybook`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Starts storybook server for UI documentation.
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Tech Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Frontend
+  - React
+  - TypeScript
+  - styled-components
+  - Redux
+  - Storybook
+  - Jest
 
-## Learn More
+- Backend
+  - JsonServer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Live Versions
+  - Frontend Application Production Build via Netlify [link](https://getir-case-market.netlify.app/)
+  - Backend Application Production Build via Heroku [link](https://getircase-api.herokuapp.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Folder Structure
+
+  ```bash
+    src/
+    ├── App.tsx
+    ├── assets                              => includes assets to use across the application
+    │   └── icons
+    │       ├── arrow-left.svg
+    │       ├── arrow-right.svg
+    │       ├── basket.svg
+    │       ├── close.svg
+    │       ├── index.ts
+    │       ├── loading.svg
+    │       ├── logo.svg
+    │       ├── menu.svg
+    │       ├── minus.svg
+    │       ├── plus.svg
+    │       ├── threeDots.svg
+    │       └── vector.svg
+    ├── components                          => components to use in across the application
+    │   ├── Button
+    │   │   ├── Button.stories.tsx
+    │   │   └── index.tsx
+    │   ├── ButtonGroup
+    │   │   ├── ButtonGroup.stories.tsx
+    │   │   └── index.tsx
+    │   ├── Card                            => name of the component
+    │   │   ├── Card.stories.tsx            => story of the component to document UI
+    │   │   ├── index.tsx                   => souce code of the component
+    │   │   └── utils.ts                    => utility functions of the component
+    │   ├── Checkbox
+    │   │   ├── Checkbox.stories.tsx
+    │   │   └── index.tsx
+    │   ├── Counter
+    │   │   ├── Counter.stories.tsx
+    │   │   ├── index.tsx
+    │   │   └── styles.ts                  => styles of the component
+    │   ├── Icon
+    │   │   ├── Icon.stories.tsx
+    │   │   └── index.tsx
+    │   ├── Input
+    │   │   ├── Input.stories.tsx
+    │   │   └── index.tsx
+    │   ├── LoadingSpinner
+    │   │   ├── LoadingSpinner.stories.tsx
+    │   │   └── index.tsx
+    │   ├── Modal
+    │   │   ├── Modal.stories.tsx
+    │   │   ├── index.tsx
+    │   │   └── utils.ts
+    │   ├── Pagination
+    │   │   ├── Pagination.stories.tsx
+    │   │   ├── index.tsx
+    │   │   └── styles.ts
+    │   ├── ProductItem
+    │   │   ├── ProductItem.stories.tsx
+    │   │   └── index.tsx
+    │   ├── Radios
+    │   │   ├── Radios.stories.tsx
+    │   │   └── index.tsx
+    │   └── index.ts
+    ├── constants                         => application constants
+    │   ├── api.ts
+    │   ├── productCount.ts
+    │   └── theme.ts
+    ├── hooks                             => custom react hooks
+    │   └── useOutsideClick.ts
+    ├── index.tsx
+    ├── layouts                           => layouts to display in different routes
+    │   └── AppLayout
+    │       ├── BasketList.tsx
+    │       ├── Footer.tsx
+    │       ├── Header.tsx
+    │       ├── Products.tsx
+    │       └── Sidebar.tsx
+    ├── lib                               => global utility functions
+    │   ├── globalStyles.ts
+    │   └── styleHelpers.ts
+    ├── pages                             => pages to display on different routes
+    │   └── Home
+    │       └── index.tsx
+    ├── react-app-env.d.ts
+    ├── setupTests.ts
+    ├── store
+    │   ├── actions                       => redux actions
+    │   │   ├── brand.ts
+    │   │   ├── company.ts
+    │   │   ├── products.ts
+    │   │   ├── tags.ts
+    │   │   └── types.ts
+    │   ├── index.ts
+    │   └── reducers                      => redux reducers
+    │       ├── basket.ts
+    │       ├── brands.ts
+    │       ├── companies.ts
+    │       ├── index.ts
+    │       ├── pagination.ts
+    │       ├── products.ts
+    │       ├── sidebar.ts
+    │       ├── sorting.ts
+    │       └── tags.ts
+    ├── types
+    │   └── index.ts
+    └── typings                           => customizing module types
+        └── styled.d.ts
+  ```
