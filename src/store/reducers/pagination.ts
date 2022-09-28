@@ -1,6 +1,6 @@
 /* eslint-disable default-param-last */
-import ActionTypes from 'store/actions/types';
-import { PaginationStateType } from 'types';
+import ActionTypes from '../actions/types';
+import { PaginationStateType } from '../../types';
 
 const InitialState: PaginationStateType = {
   selectedPageIndex: 0,
