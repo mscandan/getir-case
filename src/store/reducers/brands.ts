@@ -1,6 +1,6 @@
 /* eslint-disable default-param-last */
-import ActionTypes from 'store/actions/types';
-import { BrandStateType, CompanyType } from 'types';
+import ActionTypes from '../actions/types';
+import { BrandStateType, CompanyType } from '../../types';
 
 type ActionType =
   | { type: ActionTypes.GET_ALL_BRANDS; payload: Array<CompanyType> }
