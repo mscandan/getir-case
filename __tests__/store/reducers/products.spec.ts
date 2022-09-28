@@ -38,10 +38,6 @@ describe('Products Reducer Tests', () => {
     const res = productsReducer(initialState, { type: ActionTypes.SET_PRODUCTS_ITEM_TYPE, payload: 'shirt' });
     expect(res.itemType).toEqual('shirt');
   });
-  it('should set the given itemType to state', () => {
-    const res = productsReducer(initialState, { type: ActionTypes.SET_PRODUCTS_ITEM_TYPE, payload: 'shirt' });
-    expect(res.itemType).toEqual('shirt');
-  });
   it('should set the given allProducts to state', () => {
     const res = productsReducer(initialState, { type: ActionTypes.GET_ALL_PRODUCTS, payload: [product] });
     expect(res.allProducts.length).toEqual(1);
