@@ -11,8 +11,8 @@ export const getAllProducts = () => async (dispatch: AppDispatch) => {
   const { data } = await axios.get(`${API_URL}/items`);
   try {
     dispatch({
-      payload: data,
       type: ActionTypes.GET_ALL_PRODUCTS,
+      payload: data,
     });
   } catch (error) {
     console.error(error);

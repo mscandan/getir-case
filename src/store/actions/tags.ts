@@ -6,8 +6,8 @@ export const filterTags = (allTags: Array<TagType>, keyword: string) => async (d
   const filteredBrands = allTags.filter(brand => brand.name.toLowerCase().includes(keyword.toLowerCase()));
 
   dispatch({
-    payload: filteredBrands,
     type: ActionTypes.FILTER_TAGS,
+    payload: filteredBrands,
   });
 };
 
@@ -31,8 +31,8 @@ export const getTags = (products: Array<ProductItemType>) => async (dispatch: Ap
 
   if (tags.length > 0) {
     dispatch({
-      payload: [{ name: 'All', count: totalCount }, ...tags],
       type: ActionTypes.GET_ALL_TAGS,
+      payload: [{ name: 'All', count: totalCount }, ...tags],
     });
   }
 };
