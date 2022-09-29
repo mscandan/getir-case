@@ -29,7 +29,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-
 ### `yarn storybook`
 
 Starts storybook server for UI documentation.
@@ -43,7 +42,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
     - [TypeScript](https://www.typescriptlang.org/)
     - [styled-components](https://styled-components.com/)
     - [Redux](https://redux.js.org/)
-  - UI Documentation 
+  - UI Documentation
     - [Storybook](https://storybook.js.org/)
   - Testing
     - [Jest](https://jestjs.io/)
