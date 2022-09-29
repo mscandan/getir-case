@@ -23,6 +23,8 @@ export type CompanyType = {
   count: number;
 };
 
+export type ProductItemsItemType = 'mug' | 'shirt';
+
 export type ProductItemType = {
   tags: Array<string>;
   price: number;
@@ -31,7 +33,7 @@ export type ProductItemType = {
   slug: string;
   added: number;
   manufacturer: string;
-  itemType: 'mug' | 'shirt';
+  itemType: ProductItemsItemType;
 };
 
 export type TagType = {
@@ -75,7 +77,7 @@ export type ProductsStateType = {
   isProductsLoading: boolean;
   filteredProducts: Array<ProductItemType>;
   productsCount: number;
-  itemType: 'mug' | 'shirt';
+  itemType: ProductItemsItemType;
   allBrands: Array<CompanyType>;
 };
 

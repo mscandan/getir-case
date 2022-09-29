@@ -1,6 +1,6 @@
 /* eslint-disable default-param-last */
 import ActionTypes from '../actions/types';
-import { ProductItemType, ProductsStateType } from '../../types';
+import { ProductItemsItemType, ProductItemType, ProductsStateType } from '../../types';
 
 const InitialState: ProductsStateType = {
   allProducts: [],
@@ -24,7 +24,7 @@ type ActionType =
     }
   | {
       type: ActionTypes.SET_PRODUCTS_ITEM_TYPE;
-      payload: 'mug' | 'shirt';
+      payload: ProductItemsItemType;
     }
   | {
       type: ActionTypes.GET_PRODUCTS_BY_ITEM_TYPE;

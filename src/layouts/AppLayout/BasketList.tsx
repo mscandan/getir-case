@@ -1,11 +1,11 @@
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent */
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { Counter } from 'components/Counter';
 import ActionTypes from 'store/actions/types';
-import { ReduxStateType } from 'types';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
+import { BasketItemType } from 'types';
 
 interface BasketListProps {
   className?: string;
@@ -58,21 +58,21 @@ const StyledCounterWrapper = styled.div`
 `;
 
 export const BasketList: React.FC<BasketListProps> = ({ className, basketRef }) => {
-  const { basketList, totalPrice } = useSelector((state: ReduxStateType) => state.basket);
+  const { basketList, totalPrice } = useAppSelector(state => state.basket);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     const basketTotalPrice = basketList.reduce((acc, item) => {
       return acc + item.price * item.count;
     }, 0);
 
-    dispatch({ type: ActionTypes.SET_BASKET_TOTAL_PRICE, payload: basketTotalPrice.toFixed(2) });
+    dispatch({ type: ActionTypes.SET_BASKET_TOTAL_PRICE, payload: Number(basketTotalPrice.toFixed(2)) });
   }, [basketList, dispatch]);
 
-  const handleOnChange = (name: string, count: number) => {
-    if (count === 0) dispatch({ type: ActionTypes.REMOVE_FROM_BASKET_LIST, payload: name });
-    else dispatch({ type: ActionTypes.SET_BASKET_ITEM_QUANTITY, payload: { name, count } });
+  const handleOnChange = (item: BasketItemType) => {
+    if (item.count === 0) dispatch({ type: ActionTypes.REMOVE_FROM_BASKET_LIST, payload: item.name });
+    else dispatch({ type: ActionTypes.SET_BASKET_ITEM_QUANTITY, payload: item });
   };
 
   return (
@@ -86,7 +86,7 @@ export const BasketList: React.FC<BasketListProps> = ({ className, basketRef }) 
                   price={item.price}
                   name={item.name}
                   itemCount={item.count}
-                  onCountChange={count => handleOnChange(item.name, count)}
+                  onCountChange={count => handleOnChange({ ...item, count })}
                 />
               ))
             : 'No items in basket'}

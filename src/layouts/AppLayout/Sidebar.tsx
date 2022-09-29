@@ -1,6 +1,5 @@
 import React from 'react';
 import { AnyAction } from 'redux';
-import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { mediaBreakpointDown } from 'lib/styleHelpers';
 import { filterBrands } from 'store/actions/brand';
@@ -8,6 +7,7 @@ import { filterTags } from 'store/actions/tags';
 import { Card, Checkbox, Input, Radios } from 'components';
 import { ReduxStateType } from 'types';
 import ActionTypes from 'store/actions/types';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
 
 const SORTING_OPTIONS = [
   { id: 'priceLowToHigh', label: 'Price low to high' },
@@ -92,12 +92,12 @@ const StyledBackgroundFilter = styled.div<{ isOpen: boolean }>`
 `;
 
 export const Sidebar: React.FC = () => {
-  const { isSidebarOpen } = useSelector((state: ReduxStateType) => state.sidebar);
-  const { selectedBrands } = useSelector((state: ReduxStateType) => state.brands);
-  const { brands, allBrands } = useSelector((state: ReduxStateType) => state.brands);
-  const { tags, allTags, selectedTags } = useSelector((state: ReduxStateType) => state.tags);
-  const { selectedSortingId } = useSelector((state: ReduxStateType) => state.sorting);
-  const dispatch = useDispatch();
+  const { isSidebarOpen } = useAppSelector((state: ReduxStateType) => state.sidebar);
+  const { selectedBrands } = useAppSelector((state: ReduxStateType) => state.brands);
+  const { brands, allBrands } = useAppSelector((state: ReduxStateType) => state.brands);
+  const { tags, allTags, selectedTags } = useAppSelector((state: ReduxStateType) => state.tags);
+  const { selectedSortingId } = useAppSelector((state: ReduxStateType) => state.sorting);
+  const dispatch = useAppDispatch();
 
   const handleOnChangeBrands = (checked: boolean, brandName: string) => {
     if (checked) dispatch({ type: ActionTypes.INCLUDE_SELECTED_BRANDS, payload: brandName });
@@ -117,8 +117,8 @@ export const Sidebar: React.FC = () => {
     if (id === 'priceHighToLow') {
       dispatch({ type: ActionTypes.SET_SORTING_TYPE, payload: { value: 'price', type: 'desc' } });
     }
-    if (id === 'newToOld') dispatch({ type: ActionTypes.SET_SORTING_TYPE, payload: { value: 'added', type: 'desc' } });
-    if (id === 'oldToNew') dispatch({ type: ActionTypes.SET_SORTING_TYPE, payload: { value: 'added', type: 'asc' } });
+    if (id === 'newToOld') dispatch({ type: ActionTypes.SET_SORTING_TYPE, payload: { value: 'date', type: 'desc' } });
+    if (id === 'oldToNew') dispatch({ type: ActionTypes.SET_SORTING_TYPE, payload: { value: 'date', type: 'asc' } });
   };
 
   return (

@@ -3,11 +3,11 @@
 import axios from 'axios';
 import API_URL from 'constants/api';
 import PRODUCTS_PER_PAGE from 'constants/productCount';
-import { Dispatch } from 'redux';
-import { CompanyType, ProductItemType, SortingType } from 'types';
+import { AppDispatch } from 'store';
+import { CompanyType, ProductItemsItemType, ProductItemType, SortingType } from 'types';
 import ActionTypes from './types';
 
-export const getAllProducts = () => async (dispatch: Dispatch) => {
+export const getAllProducts = () => async (dispatch: AppDispatch) => {
   const { data } = await axios.get(`${API_URL}/items`);
   try {
     dispatch({
@@ -21,14 +21,14 @@ export const getAllProducts = () => async (dispatch: Dispatch) => {
 
 export const getProducts =
   (
-    itemType: 'mug' | 'shirt',
+    itemType: ProductItemsItemType,
     selectedTags: Array<string>,
     selectedBrands: Array<string>,
     allBrands: Array<CompanyType>,
     sortingType: SortingType,
     selectedPageIndex = 0,
   ) =>
-  async (dispatch: Dispatch) => {
+  async (dispatch: AppDispatch) => {
     const filteredTags = selectedTags.includes('All') ? [] : selectedTags;
     const filteredBrands = selectedBrands.includes('All')
       ? []
@@ -39,7 +39,7 @@ export const getProducts =
 
     const { data, headers } = await axios.get(
       `${API_URL}/items?_page=${selectedPageIndex + 1}&_limit=16&itemType=${itemType}${tagsQuery}${brandsQuery}&_sort=${
-        sortingType.value
+        sortingType.value === 'date' ? 'added' : sortingType.value
       }&_order=${sortingType.type}`,
     );
 
@@ -48,12 +48,12 @@ export const getProducts =
     try {
       if (data) dispatch({ type: ActionTypes.SET_PRODUCTS_LOADING, payload: false });
       dispatch({
-        payload: data,
         type: ActionTypes.GET_PRODUCTS,
+        payload: data,
       });
       dispatch({
-        payload: headers['x-total-count'],
         type: ActionTypes.GET_PRODUCTS_COUNT,
+        payload: Number(headers['x-total-count']),
       });
       if (Number(headers['x-total-count']) / PRODUCTS_PER_PAGE <= selectedPageIndex) {
         dispatch({
@@ -67,7 +67,7 @@ export const getProducts =
   };
 
 export const getProductsByItemType =
-  (products: Array<ProductItemType>, itemType: 'mug' | 'shirt') => async (dispatch: Dispatch) => {
+  (products: Array<ProductItemType>, itemType: ProductItemsItemType) => async (dispatch: AppDispatch) => {
     try {
       dispatch({
         type: ActionTypes.GET_PRODUCTS_BY_ITEM_TYPE,
@@ -78,7 +78,7 @@ export const getProductsByItemType =
     }
   };
 
-export const getProductsCount = (products: Array<ProductItemType>) => async (dispatch: Dispatch) => {
+export const getProductsCount = (products: Array<ProductItemType>) => async (dispatch: AppDispatch) => {
   dispatch({
     type: ActionTypes.GET_PRODUCTS_COUNT,
     payload: products.length,

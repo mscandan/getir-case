@@ -1,8 +1,8 @@
-import { Dispatch } from 'redux';
+import { AppDispatch } from 'store';
 import { ProductItemType, TagType } from 'types';
 import ActionTypes from './types';
 
-export const filterTags = (allTags: Array<TagType>, keyword: string) => async (dispatch: Dispatch) => {
+export const filterTags = (allTags: Array<TagType>, keyword: string) => async (dispatch: AppDispatch) => {
   const filteredBrands = allTags.filter(brand => brand.name.toLowerCase().includes(keyword.toLowerCase()));
 
   dispatch({
@@ -11,7 +11,7 @@ export const filterTags = (allTags: Array<TagType>, keyword: string) => async (d
   });
 };
 
-export const getTags = (products: Array<ProductItemType>) => async (dispatch: Dispatch) => {
+export const getTags = (products: Array<ProductItemType>) => async (dispatch: AppDispatch) => {
   const tags: Array<TagType> = [];
   const allTags: Array<string> = [];
 

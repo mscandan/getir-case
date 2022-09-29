@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { mediaBreakpointDown } from 'lib/styleHelpers';
 import { Modal, Icon } from 'components';
-import { useDispatch, useSelector } from 'react-redux';
-import { ReduxStateType } from 'types';
 import ActionTypes from 'store/actions/types';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
 import { BasketList } from './BasketList';
 
 const StyledHeader = styled.div`
@@ -125,9 +124,9 @@ const StyledMenuWrapper = styled.div`
 
 export const Header: React.FC = () => {
   const basketListRef = React.useRef(null);
-  const dispatch = useDispatch();
-  const { totalPrice } = useSelector((state: ReduxStateType) => state.basket);
-  const { isSidebarOpen } = useSelector((state: ReduxStateType) => state.sidebar);
+  const dispatch = useAppDispatch();
+  const { totalPrice } = useAppSelector(state => state.basket);
+  const { isSidebarOpen } = useAppSelector(state => state.sidebar);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (

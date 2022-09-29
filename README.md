@@ -38,15 +38,18 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 #### Tech Stack
 
 - Frontend
-  - React
-  - TypeScript
-  - styled-components
-  - Redux
-  - Storybook
-  - Jest
+  - Development
+    - [React](https://beta.reactjs.org/)
+    - [TypeScript](https://www.typescriptlang.org/)
+    - [styled-components](https://styled-components.com/)
+    - [Redux](https://redux.js.org/)
+  - UI Documentation 
+    - [Storybook](https://storybook.js.org/)
+  - Testing
+    - [Jest](https://jestjs.io/)
 
 - Backend
-  - JsonServer
+  - [JsonServer](https://github.com/typicode/json-server)
 
 - Live Versions
   - Frontend Application Production Build via Netlify [link](https://getir-case-market.netlify.app/)
@@ -55,6 +58,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 - Folder Structure
 
   ```bash
+    __tests__/                              => includes test files
     src/
     ├── App.tsx
     ├── assets                              => includes assets to use across the application
@@ -153,7 +157,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
     │       ├── sidebar.ts
     │       ├── sorting.ts
     │       └── tags.ts
-    ├── types
+    ├── types                             => types to use in the app
     │   └── index.ts
     └── typings                           => customizing module types
         └── styled.d.ts

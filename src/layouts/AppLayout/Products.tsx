@@ -2,7 +2,6 @@
 /* eslint-disable react/jsx-indent */
 import React from 'react';
 import { AnyAction } from 'redux';
-import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { mediaBreakpointDown } from 'lib/styleHelpers';
 import { getBrands } from 'store/actions/brand';
@@ -10,9 +9,10 @@ import { getCompanies } from 'store/actions/company';
 import { getAllProducts, getProducts, getProductsByItemType } from 'store/actions/products';
 import { getTags } from 'store/actions/tags';
 import { ButtonGroup, LoadingSpinner, Pagination, ProductItem } from 'components';
-import { ButtonGroupDataType, ProductItemType, ReduxStateType } from 'types';
+import { ButtonGroupDataType, ProductItemsItemType, ProductItemType, ReduxStateType } from 'types';
 import ActionTypes from 'store/actions/types';
 import PRODUCTS_PER_PAGE from 'constants/productCount';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
 
 const ITEM_TYPES: ButtonGroupDataType[] = [
   { id: 'mug', label: 'mug' },
@@ -77,16 +77,16 @@ const StyledPagination = styled(Pagination)`
 `;
 
 export const Products = () => {
-  const dispatch = useDispatch();
-  const { products, allProducts, productsCount, itemType, filteredProducts, isProductsLoading } = useSelector(
+  const dispatch = useAppDispatch();
+  const { products, allProducts, productsCount, itemType, filteredProducts, isProductsLoading } = useAppSelector(
     (state: ReduxStateType) => state.products,
   );
-  const { allBrands, selectedBrands } = useSelector((state: ReduxStateType) => state.brands);
-  const { selectedTags } = useSelector((state: ReduxStateType) => state.tags);
-  const { selectedPageIndex } = useSelector((state: ReduxStateType) => state.pagination);
-  const { allCompanies } = useSelector((state: ReduxStateType) => state.companies);
-  const { sortingType } = useSelector((state: ReduxStateType) => state.sorting);
-  const { basketList } = useSelector((state: ReduxStateType) => state.basket);
+  const { allBrands, selectedBrands } = useAppSelector((state: ReduxStateType) => state.brands);
+  const { selectedTags } = useAppSelector((state: ReduxStateType) => state.tags);
+  const { selectedPageIndex } = useAppSelector((state: ReduxStateType) => state.pagination);
+  const { allCompanies } = useAppSelector((state: ReduxStateType) => state.companies);
+  const { sortingType } = useAppSelector((state: ReduxStateType) => state.sorting);
+  const { basketList } = useAppSelector((state: ReduxStateType) => state.basket);
 
   const handleOnClick = (product: ProductItemType) => {
     if (basketList.length > 0) {
@@ -143,7 +143,7 @@ export const Products = () => {
       <StyledButtonGroup
         data={ITEM_TYPES}
         onSelectedButtonChange={({ label }) => {
-          dispatch({ type: ActionTypes.SET_PRODUCTS_ITEM_TYPE, payload: label });
+          dispatch({ type: ActionTypes.SET_PRODUCTS_ITEM_TYPE, payload: label as ProductItemsItemType });
         }}
         selectedButtonId={itemType}
       />
