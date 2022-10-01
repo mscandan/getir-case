@@ -99,6 +99,19 @@ export const Sidebar: React.FC = () => {
   const { selectedSortingId } = useAppSelector((state: ReduxStateType) => state.sorting);
   const dispatch = useAppDispatch();
 
+  const [brandSearchValue, setBrandSearchValue] = React.useState('');
+  const [tagSearchValue, setTagSearchValue] = React.useState('');
+
+  const handleBrandSearchValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBrandSearchValue(e.target.value);
+    dispatch(filterBrands(allBrands, e.target.value) as unknown as AnyAction);
+  };
+
+  const handleTagSearchValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTagSearchValue(e.target.value);
+    dispatch(filterTags(allTags, e.target.value) as unknown as AnyAction);
+  };
+
   const handleOnChangeBrands = (checked: boolean, brandName: string) => {
     if (checked) dispatch({ type: ActionTypes.INCLUDE_SELECTED_BRANDS, payload: brandName });
     if (!checked) dispatch({ type: ActionTypes.EXCLUDE_SELECTED_BRANDS, payload: brandName });
@@ -132,11 +145,7 @@ export const Sidebar: React.FC = () => {
           />
         </StyledCard>
         <StyledCard title="Brands" size="sm">
-          <StyledInput
-            placeholder="Search brands"
-            value=""
-            onChange={e => dispatch(filterBrands(allBrands, e.target.value) as unknown as AnyAction)}
-          />
+          <StyledInput placeholder="Search brands" value={brandSearchValue} onChange={handleBrandSearchValueChange} />
           <StyledCheckboxContent>
             {brands.map(brand => (
               <StyledCheckbox
@@ -150,11 +159,7 @@ export const Sidebar: React.FC = () => {
           </StyledCheckboxContent>
         </StyledCard>
         <StyledCard title="Tags" size="sm">
-          <StyledInput
-            placeholder="Search tags"
-            value=""
-            onChange={e => dispatch(filterTags(allTags, e.target.value) as unknown as AnyAction)}
-          />
+          <StyledInput placeholder="Search tags" value={tagSearchValue} onChange={handleTagSearchValueChange} />
           <StyledCheckboxContent>
             {tags.map(tag => {
               return (
